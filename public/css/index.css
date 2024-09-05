@@ -1,4 +1,16 @@
 /* Defaults */
+.inclusive-sans-regular {
+  font-family: "Inclusive Sans", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.inclusive-sans-regular-italic {
+  font-family: "Inclusive Sans", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
 :root {
 	--font-family: -apple-system, system-ui, sans-serif;
 	--font-family-monospace: Consolas, Menlo, Monaco, Andale Mono WT, Andale Mono, Lucida Console, Lucida Sans Typewriter, DejaVu Sans Mono, Bitstream Vera Sans Mono, Liberation Mono, Nimbus Mono L, Courier New, Courier, monospace;
@@ -10,12 +22,12 @@
 	--color-gray-50: #C0C0C0;
 	--color-gray-90: #333;
 
-	--background-color: #fff;
+	--background-color: #ffffff;
 
-	--text-color: var(--color-gray-90);
-	--text-color-link: #082840;
-	--text-color-link-active: #5f2b48;
-	--text-color-link-visited: #17050F;
+	--text-color: #212829;
+	--text-color-link: #e31c3d;
+	--text-color-link-active: #00a6c7;
+	--text-color-link-visited: #76469d;
 
 	--syntax-tab-size: 2;
 }
@@ -27,11 +39,12 @@
 		--color-gray-90: #dad8d8;
 
 		/* --text-color is assigned to --color-gray-_ above */
-		--text-color-link: #1493fb;
-		--text-color-link-active: #6969f7;
-		--text-color-link-visited: #a6a6f8;
+		--text-color: #f2f6f7;
+		--text-color-link: #50d0ee;
+		--text-color-link-active: rgba(246,36,89);
+		--text-color-link-visited: #f7ca18;
 
-		--background-color: #15202b;
+		--background-color: #0b0e0f;
 	}
 }
 
@@ -45,7 +58,7 @@ html,
 body {
 	padding: 0;
 	margin: 0 auto;
-	font-family: var(--font-family);
+	font-family: "Inclusive Sans";
 	color: var(--text-color);
 	background-color: var(--background-color);
 }
@@ -53,7 +66,20 @@ html {
 	overflow-y: scroll;
 }
 body {
-	max-width: 40em;
+	max-width: 55em;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: var(--font-family);
+}
+
+h1 {
+	color: var(--text-color-link-active);
 }
 
 /* https://www.a11yproject.com/posts/how-to-hide-content/ */
@@ -79,14 +105,26 @@ li {
 }
 
 a[href] {
-	color: var(--text-color-link);
+	color: var(--text-color);
+  text-decoration-color: var(--text-color-link);
+  text-decoration-thickness: .150em;
+  text-decoration-style: solid;
+  text-underline-offset: .16rem;
 }
 a[href]:visited {
-	color: var(--text-color-link-visited);
+	color: var(--text-color);
+  text-decoration-color: var(--text-color-link-visited);
+  text-decoration-thickness: .150em;
+  text-decoration-style: solid;
+  text-underline-offset: .16rem;
 }
 a[href]:hover,
 a[href]:active {
-	color: var(--text-color-link-active);
+	color: var(--text-color);
+  text-decoration-color: var(--text-color-link-active);
+  text-decoration-thickness: .150em;
+  text-decoration-style: solid;
+  text-underline-offset: .18rem;
 }
 
 main,
@@ -98,7 +136,7 @@ main :first-child {
 }
 
 header {
-	border-bottom: 1px dashed var(--color-gray-20);
+	border-bottom: 2px solid var(--color-gray-20);
 }
 header:after {
 	content: "";
@@ -162,11 +200,16 @@ header {
 	padding: 1em;
 }
 .home-link {
-	font-size: 1em; /* 16px /16 */
-	font-weight: 700;
-	margin-right: 2em;
+	color: var(--text-color-link-visited) !important;
+	font-family: var(--font-family);
+	font-size: 2em; /* 16px /16 */
+	font-weight: 900;
+	margin-right: 10em;
 }
 .home-link:link:not(:hover) {
+	text-decoration: none;
+}
+.home-link:link:hover {
 	text-decoration: none;
 }
 
@@ -179,13 +222,22 @@ header {
 }
 .nav-item {
 	display: inline-block;
+	margin-top: 1em;
 	margin-right: 1em;
 }
 .nav-item a[href]:not(:hover) {
-	text-decoration: none;
+	color: var(--text-color);
+  text-decoration-color: var(--text-color-link);
+  text-decoration-thickness: .150em;
+  text-decoration-style: solid;
+  text-underline-offset: .16rem;
 }
 .nav a[href][aria-current="page"] {
-	text-decoration: underline;
+	color: var(--text-color);
+  text-decoration-color: var(--text-color-link-active);
+  text-decoration-thickness: .150em;
+  text-decoration-style: solid;
+  text-underline-offset: .18rem;
 }
 
 /* Posts list */
