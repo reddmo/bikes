@@ -28,7 +28,7 @@
 	--text-color-link: #e31c3d;
 	--text-color-link-active: #007b96;
 	--text-color-link-visited: #76469d;
-
+	--border-color: #ffb86c;
 	--syntax-tab-size: 2;
 }
 
@@ -43,7 +43,7 @@
 		--text-color-link: #50d0ee;
 		--text-color-link-active: rgba(246,36,89);
 		--text-color-link-visited: #f7ca18;
-
+		--border-color: #ffb86c;
 		--background-color: #0b0e0f;
 	}
 }
@@ -58,7 +58,7 @@ html,
 body {
 	padding: 0;
 	margin: 0 auto;
-	font-family: var(--font-family);
+	font-family: var(--font-family-monospace);
 	color: var(--text-color);
 	background-color: var(--background-color);
 }
@@ -136,7 +136,7 @@ main :first-child {
 }
 
 header {
-	border-bottom: 2px solid var(--color-gray-20);
+	border-bottom: 2px solid var(--border-color);
 }
 header:after {
 	content: "";
