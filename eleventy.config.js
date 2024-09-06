@@ -3,6 +3,7 @@ import { feedPlugin } from "@11ty/eleventy-plugin-rss";
 import pluginSyntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
 import pluginNavigation from "@11ty/eleventy-navigation";
 import { eleventyImageTransformPlugin } from "@11ty/eleventy-img";
+import 'dotenv/config';
 
 import pluginFilters from "./_config/filters.js";
 
@@ -53,11 +54,11 @@ export default async function(eleventyConfig) {
 		},
 		metadata: {
 			language: "en",
-			title: "Blog Title",
-			subtitle: "This is a longer description about your blog.",
-			base: "https://example.com/",
+			title: "bikes&things",
+			subtitle: "My journey on an e-bike.",
+			base: "https://bike.stuffandthings.lol/",
 			author: {
-				name: "Your Name"
+				name: "Jason"
 			}
 		}
 	});
@@ -121,8 +122,8 @@ export const config = {
 	// These are all optional:
 	dir: {
 		input: "content",          // default: "."
-		includes: "../_includes",  // default: "_includes" (`input` relative)
-		data: "../_data",          // default: "_data" (`input` relative)
+		includes: "/_includes",  // default: "_includes" (`input` relative)
+		data: "/_data",          // default: "_data" (`input` relative)
 		output: "_site"
 	},
 
