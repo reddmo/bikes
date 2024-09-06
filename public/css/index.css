@@ -26,7 +26,7 @@
 
 	--text-color: #212829;
 	--text-color-link: #e31c3d;
-	--text-color-link-active: #00a6c7;
+	--text-color-link-active: #007b96;
 	--text-color-link-visited: #76469d;
 
 	--syntax-tab-size: 2;
@@ -58,7 +58,7 @@ html,
 body {
 	padding: 0;
 	margin: 0 auto;
-	font-family: "Inclusive Sans";
+	font-family: var(--font-family);
 	color: var(--text-color);
 	background-color: var(--background-color);
 }
