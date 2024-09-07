@@ -4,7 +4,7 @@
   width="1em"
   height="1em"
   fill="none"
-  stroke="currentColor"
+  stroke="var(--text-color-link)"
   stroke-width="2"
   xmlns="http://www.w3.org/2000/svg"
 >
@@ -15,6 +15,6 @@
   <path
     d="M6.061,7.288C6.061,6.612 6.594,6.069 7.254,6.069C7.915,6.069 8.447,6.616 8.447,7.288C8.447,7.961 7.915,8.508 7.254,8.508C6.594,8.508 6.061,7.961 6.061,7.288Z"
     stroke-width="1"
-    fill="currentColor"
+    fill="var(--text-color-link)"
   ></path>
 </svg>
