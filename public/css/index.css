@@ -73,12 +73,13 @@ body {
 	font-family: "Departure";
 	color: var(--text-color);
 	background-color: var(--background-color);
+	text-wrap: pretty;
 }
 html {
 	overflow-y: scroll;
 }
 body {
-	max-width: 55em;
+	max-width: 40em;
 }
 
 h1,
@@ -110,7 +111,7 @@ p:last-child {
 	margin-bottom: 0;
 }
 p {
-	line-height: 1.5;
+	line-height: 1.75;
 }
 
 li {
@@ -217,7 +218,7 @@ header {
 	font-family: var(--font-family);
 	font-size: 2em; /* 16px /16 */
 	font-weight: 900;
-	margin-right: 10em;
+	margin-right: 3em;
 }
 .home-link:link:not(:hover) {
 	text-decoration: none;
