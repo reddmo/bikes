@@ -49,7 +49,7 @@
 				<h2 class="visually-hidden">Top level navigation menu</h2>
 				<ul class="nav">
 				{%- for entry in collections.all | eleventyNavigation %}
-					<li class="nav-item"><a href="{{ entry.url }}"{% if entry.url == page.url %} aria-current="page"{% endif %}>{{ entry.title }}</a></li>
+					<li class="nav-item"><a href="{{ entry.url }}" {% if entry.url == page.url %} aria-current="page"{% endif %}>{{ entry.title }}</a></li>
 				{%- endfor %}
 				</ul>
 			</nav>
@@ -62,8 +62,9 @@
 		</main>
 
 		<footer>
+
 			<ul class="footer-links">
-			<li><em>Built with <a href="https://www.11ty.dev/">{{ eleventy.generator }}</a></em></li>
+			<em>Built with <a href="https://www.11ty.dev/">{{ eleventy.generator }}</a></em>
       <li><a href="https://social.lol/@jasonm" target="_blank"><img src="/svg/social-mastodon.svg" alt="Mastodon"></a></li>
       <li><a href="https://github.com/reddmo" target="_blank" rel="me"><img src="/svg/social-github.svg" alt="Github"></a></li>
       <li><a href="https://bsky.app/profile/jasonmoser.bsky.social" target="_blank"><img src="/svg/social-bluesky.svg" alt="BlueSky"></a></li>

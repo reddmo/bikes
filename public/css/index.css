@@ -129,7 +129,7 @@ a[href]:active {
 
 main,
 footer {
-	padding: 1rem;
+	padding: 1.25rem;
 }
 main :first-child {
 	margin-top: .5rem;
@@ -311,7 +311,8 @@ header {
 .footer-links {
   list-style: none;
   display: flex;
+  color: var(--text-color-link);
   align-items: left;
-  gap: 1rem;
-	flex-wrap: wrap;
+  gap: 1.5rem;
+  padding-left: 0;
 }
