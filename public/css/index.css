@@ -1,14 +1,18 @@
 /* Defaults */
-.inclusive-sans-regular {
-  font-family: "Inclusive Sans", sans-serif;
+@font-face {
+  font-family: "Inclusive Sans";
   font-weight: 400;
   font-style: normal;
+  src: url("/assets/fonts/inclusive-sans-latin-400-normal.woff2") format("woff2");
+  font-display: swap;
 }
 
-.inclusive-sans-regular-italic {
-  font-family: "Inclusive Sans", sans-serif;
+@font-face {
+  font-family: "Inclusive Sans";
   font-weight: 400;
   font-style: italic;
+  src: url("/assets/fonts/inclusive-sans-latin-400-italic.woff2") format("woff2");
+  font-display: swap;
 }
 
 @font-face {
@@ -83,7 +87,8 @@ h3,
 h4,
 h5,
 h6 {
-	font-family: var(--font-family);
+	font-family: "Inclusive Sans";
+	font-weight: 900;
 }
 
 h1 {
@@ -315,6 +320,10 @@ header {
 .post-metadata time {
 	margin-right: 1em;
 }
+
+.footer {
+	font-family: "Inclusive Sans";
+	}
 
 .footer-links {
   list-style: none;
