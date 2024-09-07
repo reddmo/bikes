@@ -308,3 +308,10 @@ header {
 	margin-right: 1em;
 }
 
+.footer-links {
+  list-style: none;
+  display: flex;
+  align-items: left;
+  gap: 1rem;
+	flex-wrap: wrap;
+}

@@ -11,7 +11,7 @@
 		<link rel="alternate" href="feed/json.njk" type="application/json" title="{{ metadata.title }}">
 
 		{#- Uncomment this if you’d like folks to know that you used Eleventy to build your site!  #}
-		{#- <meta name="generator" content="{{ eleventy.generator }}"> #}
+		<meta name="generator" content="{{ eleventy.generator }}">
 
 		{#-
 		CSS bundles are provided via the `eleventy-plugin-bundle` plugin:
@@ -61,7 +61,13 @@
 		</main>
 
 		<footer>
-			<p><em>Built with <a href="https://www.11ty.dev/">{{ eleventy.generator }}</a></em></p>
+			<ul class="footer-links">
+			<li><em>Built with <a href="https://www.11ty.dev/">{{ eleventy.generator }}</a></em></li>
+      <li><a href="https://social.lol/@jasonm" target="_blank" rel="me"><img src="/svg/social-mastodon.svg" alt="Mastodon"></a></li>
+      <li><a href="https://github.com/reddmo" target="_blank" rel="me"><img src="/svg/social-github.svg" alt="Github"></a></li>
+      <li><a href="https://bsky.app/profile/jasonmoser.bsky.social" target="_blank"><img src="/svg/social-bluesky.svg" alt="BlueSky"></a></li>
+      <li><a href="/feed.xml"><img src="/svg/rss.svg" alt="RSS"></a></li>
+			</ul>
 		</footer>
 
 		<!-- This page `{{ page.url | htmlBaseUrl }}` was built on {% currentBuildDate %} -->

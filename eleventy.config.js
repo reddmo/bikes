@@ -123,6 +123,7 @@ export const config = {
 	dir: {
 		input: "content",          // default: "."
 		includes: "/_includes",  // default: "_includes" (`input` relative)
+		svg: "/svg",
 		data: "/_data",          // default: "_data" (`input` relative)
 		output: "_site"
 	},
