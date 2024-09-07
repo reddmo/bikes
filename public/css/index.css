@@ -11,6 +11,14 @@
   font-style: italic;
 }
 
+@font-face {
+	font-family: "Departure";
+	font-style: normal;
+	font-weight: 400;
+	src: url("/assets/fonts/DepartureMono-Regular.woff2") format("woff2");
+	font-display: swap;
+}
+
 :root {
 	--font-family: -apple-system, system-ui, sans-serif;
 	--font-family-monospace: Consolas, Menlo, Monaco, Andale Mono WT, Andale Mono, Lucida Console, Lucida Sans Typewriter, DejaVu Sans Mono, Bitstream Vera Sans Mono, Liberation Mono, Nimbus Mono L, Courier New, Courier, monospace;
@@ -58,7 +66,7 @@ html,
 body {
 	padding: 0;
 	margin: 0 auto;
-	font-family: var(--font-family-monospace);
+	font-family: "Inclusive Sans";
 	color: var(--text-color);
 	background-color: var(--background-color);
 }
@@ -107,14 +115,14 @@ li {
 a[href] {
 	color: var(--text-color);
   text-decoration-color: var(--text-color-link);
-  text-decoration-thickness: .150em;
+  text-decoration-thickness: .175em;
   text-decoration-style: solid;
   text-underline-offset: .16rem;
 }
 a[href]:visited {
 	color: var(--text-color);
   text-decoration-color: var(--text-color-link-visited);
-  text-decoration-thickness: .150em;
+  text-decoration-thickness: .175em;
   text-decoration-style: solid;
   text-underline-offset: .16rem;
 }
@@ -122,7 +130,7 @@ a[href]:hover,
 a[href]:active {
 	color: var(--text-color);
   text-decoration-color: var(--text-color-link-active);
-  text-decoration-thickness: .150em;
+  text-decoration-thickness: .175em;
   text-decoration-style: solid;
   text-underline-offset: .18rem;
 }
@@ -228,14 +236,14 @@ header {
 .nav-item a[href]:not(:hover) {
 	color: var(--text-color);
   text-decoration-color: var(--text-color-link);
-  text-decoration-thickness: .150em;
+  text-decoration-thickness: .175em;
   text-decoration-style: solid;
   text-underline-offset: .16rem;
 }
 .nav a[href][aria-current="page"] {
 	color: var(--text-color);
   text-decoration-color: var(--text-color-link-active);
-  text-decoration-thickness: .150em;
+  text-decoration-thickness: .175em;
   text-decoration-style: solid;
   text-underline-offset: .18rem;
 }
