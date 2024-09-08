@@ -141,6 +141,11 @@ a[href]:active {
   text-underline-offset: .18rem;
 }
 
+blockquote {
+	padding: 0 1em;
+  color: var(--color-gray-90);
+  border-left: 0.25em solid var(--text-color-link-active);
+
 main,
 footer {
 	padding: 1.25rem;
