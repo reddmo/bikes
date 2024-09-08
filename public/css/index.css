@@ -35,7 +35,6 @@
 	--color-gray-90: #333;
 
 	--background-color: #ffffff;
-
 	--text-color: #212829;
 	--text-color-link: #d81c23;
 	--text-color-link-active: #d97441;
@@ -50,7 +49,6 @@
 		--color-gray-50: #C0C0C0;
 		--color-gray-90: #dad8d8;
 
-		/* --text-color is assigned to --color-gray-_ above */
 		--text-color: #f2f6f7;
 		--text-color-link: #ff6a3d;
 		--text-color-link-active: #f4db7d;
@@ -59,7 +57,6 @@
 		--background-color: #1a2238;
 	}
 }
-
 
 /* Global stylesheet */
 * {
@@ -145,6 +142,7 @@ blockquote {
 	padding: 0 1em;
   color: var(--color-gray-90);
   border-left: 0.25em solid var(--text-color-link-active);
+}
 
 main,
 footer {
@@ -342,3 +340,4 @@ header {
   gap: 1.5rem;
   padding-left: 0;
 }
+
