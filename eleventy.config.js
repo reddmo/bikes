@@ -18,6 +18,7 @@ export default async function(eleventyConfig) {
 		})
 		.addPassthroughCopy("./content/feed/pretty-atom-feed.xsl");
   eleventyConfig.addPassthroughCopy("./content/assets/fonts");
+ // eleventyConfig.addPassthroughCopy("./content/blog/attributes_output.json");
 	// Run Eleventy when these files change:
 	// https://www.11ty.dev/docs/watch-serve/#add-your-own-watch-targets
 
