@@ -72,7 +72,7 @@ export default async function(eleventyConfig) {
 		// Output formats for each image.
 		formats: ["auto"],
 
-		// widths: ["auto"],
+		widths: ["auto"],
 
 		defaultAttributes: {
 			// e.g. <img loading decoding> assigned on the HTML tag will override these values.
