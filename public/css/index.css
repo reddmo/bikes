@@ -104,6 +104,12 @@ h1 {
 	width: 1px;
 }
 
+ img,
+picture {
+  height: auto;
+  width: 100%;
+}
+
 p:last-child {
 	margin-bottom: 0;
 }
