@@ -227,7 +227,7 @@ header {
 	font-family: var(--font-family);
 	font-size: 2em; /* 16px /16 */
 	font-weight: 900;
-	margin-right: 3em;
+	margin-right: 2em;
 }
 .home-link:link:not(:hover) {
 	text-decoration: none;
