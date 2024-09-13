@@ -72,13 +72,13 @@ export default async function(eleventyConfig) {
 		// Output formats for each image.
 		formats: ["avif", "webp", "jpg", "png", "auto"],
 
-		widths: ["auto", .1],
+		// widths: ["auto", 200],
 
 		defaultAttributes: {
 			// e.g. <img loading decoding> assigned on the HTML tag will override these values.
 			loading: "lazy",
 			decoding: "async",
-			sizes: ".1",
+			sizes: "75vmax",
 		}
 	});
 
