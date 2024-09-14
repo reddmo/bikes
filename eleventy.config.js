@@ -4,8 +4,18 @@ import pluginSyntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
 import pluginNavigation from "@11ty/eleventy-navigation";
 import { eleventyImageTransformPlugin } from "@11ty/eleventy-img";
 import 'dotenv/config';
+import markdownit from "markdown-it";
+import markdownItGitHubAlerts from 'markdown-it-github-alerts';
+import setLibrary from 'markdown-it-github-alerts';
+
 
 import pluginFilters from "./_config/filters.js";
+
+const md = markdownit({
+  html: true,
+  linkify: true,
+  typographer: true
+})
 
 /** @param {import("@11ty/eleventy").UserConfig} eleventyConfig */
 export default async function(eleventyConfig) {

@@ -1,4 +1,8 @@
 /* Defaults */
+import 'markdown-it-github-alerts/styles/github-colors-light.css'
+import 'markdown-it-github-alerts/styles/github-colors-dark-media.css'
+import 'markdown-it-github-alerts/styles/github-base.css'
+
 @font-face {
   font-family: "Inclusive Sans";
   font-weight: 400;
