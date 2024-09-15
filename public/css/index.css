@@ -179,8 +179,11 @@ header:after {
 	justify-content: space-between;
 	gap: .5em 1em;
 	list-style: "";
-	border-top: 1px dashed var(--color-gray-20);
 	padding: 1em 0;
+}
+.links-nextprev {
+	border-top: 2px solid var(--border-color);
+	padding: 0 !important;
 }
 .links-nextprev > * {
 	flex-grow: 1;
