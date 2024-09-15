@@ -182,7 +182,7 @@ header:after {
 	padding: 1em 0;
 }
 .links-nextprev {
-	border-top: 2px solid var(--border-color);
+	border-top: 2px dashed var(--text-color-link-active);
 	padding: 0 !important;
 }
 .links-nextprev > * {
