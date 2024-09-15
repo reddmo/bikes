@@ -67,6 +67,10 @@ import 'markdown-it-github-alerts/styles/github-base.css'
 	box-sizing: border-box;
 }
 
+@view-transition {
+	navigation: auto;
+}
+
 html,
 body {
 	padding: 0;
