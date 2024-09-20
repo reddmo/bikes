@@ -184,6 +184,7 @@ header:after {
 	gap: .5em 1em;
 	list-style: "";
 	padding: 1em 0;
+	font-family: "Inclusive Sans";
 }
 .links-nextprev {
 	border-top: 2px dashed var(--text-color-link-active);
