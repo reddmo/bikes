@@ -53,10 +53,10 @@ import 'markdown-it-github-alerts/styles/github-base.css'
 		--color-gray-50: #C0C0C0;
 		--color-gray-90: #dad8d8;
 
-		--text-color: oklch(83.282% 0.18704 93.805);
-		--text-color-link: oklch(84.068% 0.32032 147.55);
-		--text-color-link-active: oklch(80.517% 0.10829 3.4159);
-		--text-color-link-visited: oklch(88.647% 0.194 188.3);
+		--text-color: #f2f6f7;
+		--text-color-link: #ff6a3d;
+		--text-color-link-active: #f4db7d;
+		--text-color-link-visited: #9daaf2;
 		--border-color: #ff6a3d;
 		--background-color: #1a2238;
 	}
