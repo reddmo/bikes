@@ -38,11 +38,11 @@ import 'markdown-it-github-alerts/styles/github-base.css'
 	--color-gray-50: #C0C0C0;
 	--color-gray-90: #333;
 
-	--background-color: #ffffff;
+	--background-color: rgb(240,222,187);
 	--text-color: #212829;
-	--text-color-link: #d81c23;
-	--text-color-link-active: #d97441;
-	--text-color-link-visited: #4fa8c2;
+	--text-color-link: #b30d0d;
+	--text-color-link-active: #e06727;
+	--text-color-link-visited: #247e81;
 	--border-color: #d81c23;
 	--syntax-tab-size: 2;
 }
