@@ -1,6 +1,6 @@
 export default {
 	title: "bikes&things",
-	url: "https://bike.stuffandthings.com/",
+	url: "https://bikesandthings.lol/",
 	language: "en",
 	description: "My e-bike adventures.",
 	author: {
