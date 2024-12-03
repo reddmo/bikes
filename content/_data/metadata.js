@@ -1,8 +1,8 @@
 export default {
-	title: "bikes&things",
-	url: "https://bikesandthings.lol/",
+	title: "stuff&things",
+	url: "https://stuffandthings.lol/",
 	language: "en",
-	description: "My e-bike adventures.",
+	description: "Just some stuff about things.",
 	author: {
 		name: "Jason",
 		email: "jasonm@omg.lol"
