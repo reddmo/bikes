@@ -95,7 +95,6 @@ h4,
 h5,
 h6 {
 	font-family: 'Inclusive Sans';
-	font-weight: 900;
 }
 
 h1 {
@@ -180,12 +179,15 @@ header:after {
 }
 
 .links-nextprev {
+	font-family: 'Inclusive Sans';
+}
+
+.links-nextprev {
 	display: flex;
 	justify-content: space-between;
 	gap: .5em 1em;
 	list-style: "";
 	padding: 1em 0;
-	font-family: 'Inclusive Sans';
 }
 .links-nextprev {
 	border-top: 2px dashed var(--text-color-link-active);
