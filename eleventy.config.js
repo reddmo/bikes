@@ -65,9 +65,9 @@ export default async function(eleventyConfig) {
 		},
 		metadata: {
 			language: "en",
-			title: "bikes&things",
-			subtitle: "My journey on an e-bike.",
-			base: "https://bikesandthings.lol/",
+			title: "stuff&things",
+			subtitle: "Just some stuff about things.",
+			base: "https://stuffandthings.lol/",
 			author: {
 				name: "Jason"
 			}
