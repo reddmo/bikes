@@ -2,7 +2,7 @@
 import 'markdown-it-github-alerts/styles/github-colors-light.css'
 import 'markdown-it-github-alerts/styles/github-colors-dark-media.css'
 import 'markdown-it-github-alerts/styles/github-base.css'
-@import url(https://fonts.bunny.net/css?family=inclusive-sans:400,400i);
+@import url('https://fonts.bunny.net/css?family=inclusive-sans:400,400i');
 
  @font-face {
   font-family: "Inclusive Sans";
