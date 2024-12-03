@@ -11,13 +11,13 @@ pagination:
 <h1>Posts</h1>
 
 {% for post in blogposts %}
-  <article>
+
     <h2>{{ post.data.title }}</h2>
 		<p><time class="postlist-date" datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate("dd LLLL yyyy") }}</time></p>
     <p>{{ post.data.description }}</p>
 
-    <a href="{{ post.url }}" class="button">Read on</a>
-  </article><br /><hr><br />
+    <p><a href="{{ post.url }}" class="button">Read on</a></p>
+ <hr>
 {% endfor %}
 
 <br />
@@ -25,16 +25,16 @@ pagination:
   <nav aria-label="Post pages">
 <center>
         {% if page.url != pagination.href.first %}
-          <a href="{{ pagination.href.first }}">First</a>
+          <a href="{{ pagination.href.first }}">{% lucide "arrow-big-left-dash" %}</a>
         {% else %}
-          <span aria-disabled="true">First</span>
+          <span aria-label="First Page">{% lucide "arrow-big-left-dash" %}</span>
 
         {% endif %}
 
         {% if pagination.href.previous %}
-          <a href="{{ pagination.href.previous }}">Previous</a>
+          <a href="{{ pagination.href.previous }}">{% lucide "arrow-big-left" %}</a>
         {% else %}
-          <span aria-disabled="true">Previous</span>
+          <span aria-label="Previous Page">{% lucide "arrow-big-left" %}</span>
 
         {% endif %}
 
@@ -50,16 +50,16 @@ pagination:
       {%- endfor %}
 
         {% if pagination.href.next %}
-          <a href="{{ pagination.href.next }}">Next</a>
+          <a href="{{ pagination.href.next }}">{% lucide "arrow-big-right" %}</a>
         {% else %}
-          <span aria-disabled="true">Next</span>
+          <span aria-label="Next Page">{% lucide "arrow-big-right" %}</span>
 
         {% endif %}
 
         {% if page.url != pagination.href.last %}
-          <a href="{{ pagination.href.last }}">Last</a>
+          <a href="{{ pagination.href.last }}">{% lucide "arrow-big-right-dash" %}</a>
         {% else %}
-          <span aria-disabled="true">Last</span>
+          <span aria-label="Last Page">{% lucide "arrow-big-right-dash" %}</span>
 
         {% endif %}
 </center>

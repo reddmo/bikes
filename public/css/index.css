@@ -172,6 +172,32 @@ blockquote {
   border-left: 0.25em solid var(--text-color-link-active);
 }
 
+/*
+.button {
+    display: inline-block;
+    background: var(--text-color-link);
+    color: var(--background-color);
+    border-radius: 4px;
+    padding: 1px;
+    border: none;
+    font-size: var(--font-size-base);
+    place-items: center;
+    font-size: inherit;
+    line-height: 1.15em;
+    transition: background 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+.button a {
+    text-decoration: none !important;
+}
+
+.button:hover {
+    background-color: var(--text-color-link-active);
+    color: var(--background-color);
+}
+*/
+
 main,
 footer {
 	padding: 1.25rem;

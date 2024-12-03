@@ -7,6 +7,7 @@ import 'dotenv/config';
 import markdownit from "markdown-it";
 import markdownItGitHubAlerts from 'markdown-it-github-alerts';
 import setLibrary from 'markdown-it-github-alerts';
+import eleventyLucideicons from "@grimlink/eleventy-plugin-lucide-icons";
 
 
 import pluginFilters from "./_config/filters.js";
@@ -48,6 +49,15 @@ export default async function(eleventyConfig) {
 	eleventyConfig.addPlugin(pluginNavigation);
 	eleventyConfig.addPlugin(HtmlBasePlugin);
 	eleventyConfig.addPlugin(InputPathToUrlTransformPlugin);
+  eleventyConfig.addPlugin(eleventyLucideicons,{
+    "class": "custom-class",
+    "width": 24,
+    "height": 24,
+    "stroke": "currentColor",
+    "stroke-width": 2
+  });
+
+  eleventyConfig.addShortcode("lucide", function(eleventyLucideicons) { /* … */ });
 
 	// Atom Feed
 	eleventyConfig.addPlugin(feedPlugin, {
