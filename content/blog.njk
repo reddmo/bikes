@@ -24,11 +24,12 @@ pagination:
 {% if pagination.pages.length > 1 %}
   <nav aria-label="Post pages">
 <center>
+
         {% if page.url != pagination.href.first %}
           <a href="{{ pagination.href.first }}">{% lucide "arrow-big-left-dash" %}</a>
         {% else %}
-          <span aria-label="First Page">{% lucide "arrow-big-left-dash" %}</span>
-
+          <span aria-hidden="true">{% lucide "arrow-big-left-dash" %}</span>
+<span class="visually-hidden">First page</span>
         {% endif %}
 
         {% if pagination.href.previous %}
