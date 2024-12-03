@@ -25,14 +25,14 @@ pagination:
   <nav aria-label="Post pages">
 <center>
         {% if page.url != pagination.href.first %}
-          <a href="{{ pagination.href.first }}">First Page</a>
+          <a href="{{ pagination.href.first }}">First</a>
         {% else %}
           <span aria-disabled="true">First</span>
 
         {% endif %}
 
         {% if pagination.href.previous %}
-          <a href="{{ pagination.href.previous }}">Previous Page</a>
+          <a href="{{ pagination.href.previous }}">Previous</a>
         {% else %}
           <span aria-disabled="true">Previous</span>
 
@@ -50,14 +50,14 @@ pagination:
       {%- endfor %}
 
         {% if pagination.href.next %}
-          <a href="{{ pagination.href.next }}">Next Page</a>
+          <a href="{{ pagination.href.next }}">Next</a>
         {% else %}
           <span aria-disabled="true">Next</span>
 
         {% endif %}
 
         {% if page.url != pagination.href.last %}
-          <a href="{{ pagination.href.last }}">Last Page </a>
+          <a href="{{ pagination.href.last }}">Last</a>
         {% else %}
           <span aria-disabled="true">Last</span>
 
