@@ -26,16 +26,17 @@ pagination:
 <center>
 
         {% if page.url != pagination.href.first %}
-          <a href="{{ pagination.href.first }}">{% lucide "arrow-big-left-dash" %}</a>
+          <a href="First Page {{ pagination.href.first }}">{% lucide "arrow-big-left-dash" %}</a>
         {% else %}
           <span aria-hidden="true">{% lucide "arrow-big-left-dash" %}</span>
-<span class="visually-hidden">First page</span>
+					<span class="visually-hidden">First page</span>
         {% endif %}
 
         {% if pagination.href.previous %}
-          <a href="{{ pagination.href.previous }}">{% lucide "arrow-big-left" %}</a>
+          <a href="Previous Page {{ pagination.href.previous }}">{% lucide "arrow-big-left" %}</a>
         {% else %}
-          <span aria-label="Previous Page">{% lucide "arrow-big-left" %}</span>
+          <span aria-hidden="true">{% lucide "arrow-big-left" %}</span>
+          <span class="visually-hidden">Previous page</span>
 
         {% endif %}
 
@@ -51,17 +52,17 @@ pagination:
       {%- endfor %}
 
         {% if pagination.href.next %}
-          <a href="{{ pagination.href.next }}">{% lucide "arrow-big-right" %}</a>
+          <a href="Next page {{ pagination.href.next }}">{% lucide "arrow-big-right" %}</a>
         {% else %}
-          <span aria-label="Next Page">{% lucide "arrow-big-right" %}</span>
-
+          <span aria-hidden="true">{% lucide "arrow-big-right" %}</span>
+          <span class="visually-hidden">Next page</span>
         {% endif %}
 
         {% if page.url != pagination.href.last %}
-          <a href="{{ pagination.href.last }}">{% lucide "arrow-big-right-dash" %}</a>
+          <a href="Last page {{ pagination.href.last }}">{% lucide "arrow-big-right-dash" %}</a>
         {% else %}
-          <span aria-label="Last Page">{% lucide "arrow-big-right-dash" %}</span>
-
+          <span aria-hidden="true">{% lucide "arrow-big-right-dash" %}</span>
+          <span class="visually-hidden">Last page</span>
         {% endif %}
 </center>
   </nav>
