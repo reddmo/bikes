@@ -2,8 +2,9 @@
 import 'markdown-it-github-alerts/styles/github-colors-light.css'
 import 'markdown-it-github-alerts/styles/github-colors-dark-media.css'
 import 'markdown-it-github-alerts/styles/github-base.css'
+@import url(https://fonts.bunny.net/css?family=inclusive-sans:400,400i);
 
-@font-face {
+ @font-face {
   font-family: "Inclusive Sans";
   font-weight: 400;
   font-style: normal;
@@ -93,7 +94,7 @@ h3,
 h4,
 h5,
 h6 {
-	font-family: var(--font-family);
+	font-family: 'Inclusive Sans';
 	font-weight: 900;
 }
 
@@ -184,7 +185,7 @@ header:after {
 	gap: .5em 1em;
 	list-style: "";
 	padding: 1em 0;
-	font-family: var(--font-family);
+	font-family: 'Inclusive Sans';
 }
 .links-nextprev {
 	border-top: 2px dashed var(--text-color-link-active);
@@ -352,7 +353,7 @@ header {
 }
 
 .footer {
-	font-family: var(--font-family);
+	font-family: 'Inclusive Sans';
 	}
 
 .footer-links {
