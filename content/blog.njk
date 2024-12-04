@@ -2,9 +2,66 @@
 eleventyNavigation:
   key: Blog
   order: 2
+pagination:
+  data: collections.posts
+  size: 10
+  alias: blogposts
+  reverse: true
 ---
-
 <h1>Posts</h1>
 
-{% set postslist = collections.posts %}
-{% include "postslist.njk" %}
+{% for post in blogposts %}
+
+    <h2>{{ post.data.title }}</h2>
+		<p><time class="postlist-date" datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate("dd LLLL yyyy") }}</time></p>
+    <p>{{ post.data.description }}</p>
+
+    <p><a href="{{ post.url }}" class="button">Read more</a> {% lucide "move-right", { "width": "12", "height": "12" } %}</p>
+ <hr>
+{% endfor %}
+
+<br />
+{% if pagination.pages.length > 1 %}
+  <nav aria-label="Post pages">
+<center>
+
+        {% if page.url != pagination.href.first %}
+          <a href="{{ pagination.href.first }}">First</a>
+        {% else %}
+          <span aria-disabled="true">First</span>
+        {% endif %}
+
+        {% if pagination.href.previous %}
+          <a href="{{ pagination.href.previous }}">Previous</a>
+        {% else %}
+          <span aria-disabled="true">Previous</span>
+
+        {% endif %}
+
+      <!-- Loop over pagination.pages array and add the pages to the list -->
+      {%- for pageEntry in pagination.pages %}
+
+           <a href="{{ pagination.hrefs[ loop.index0 ] }}"
+            {% if page.url == pagination.hrefs[ loop.index0 ] %}
+              aria-current="page"
+            {% endif %}
+          >{{ loop.index }}</a>
+
+      {%- endfor %}
+
+        {% if pagination.href.next %}
+          <a href="{{ pagination.href.next }}">Next</a>
+        {% else %}
+          <span aria-disabled="true">Next</span>
+
+        {% endif %}
+
+        {% if page.url != pagination.href.last %}
+          <a href="{{ pagination.href.last }}">Last</a>
+        {% else %}
+          <span aria-disabled="true">Last</span>
+
+        {% endif %}
+</center>
+  </nav>
+{% endif %}

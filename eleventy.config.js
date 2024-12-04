@@ -51,10 +51,9 @@ export default async function(eleventyConfig) {
 	eleventyConfig.addPlugin(InputPathToUrlTransformPlugin);
   eleventyConfig.addPlugin(eleventyLucideicons,{
     "class": "custom-class",
-    "width": 24,
-    "height": 24,
+    "align-item": "center",
     "stroke": "currentColor",
-    "stroke-width": 2
+    "stroke-width": 4
   });
 
   eleventyConfig.addShortcode("lucide", function(eleventyLucideicons) { /* … */ });
