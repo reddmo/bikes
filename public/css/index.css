@@ -1,10 +1,6 @@
 /* Defaults */
-import 'markdown-it-github-alerts/styles/github-colors-light.css'
-import 'markdown-it-github-alerts/styles/github-colors-dark-media.css'
-import 'markdown-it-github-alerts/styles/github-base.css'
-@import url('https://fonts.bunny.net/css?family=inclusive-sans:400,400i');
 
- @font-face {
+@font-face {
   font-family: "Inclusive Sans";
   font-weight: 400;
   font-style: normal;
@@ -13,9 +9,9 @@ import 'markdown-it-github-alerts/styles/github-base.css'
 }
 
 @font-face {
-  font-family: "Inclusive Sans";
+  font-family: "Inclusive Sans Italic";
   font-weight: 400;
-  font-style: italic;
+  font-style: normal;
   src: url("/assets/fonts/inclusive-sans-latin-400-italic.woff2") format("woff2");
   font-display: swap;
 }
@@ -442,7 +438,7 @@ textarea {
   background: var(--background-color);
   border: 2px solid var(--text-color-link-visited);
   border-radius: 5px;
-  font-family: 'Departure Mono';
+  font-family: 'Departure';
 }
 input {
   width: 55%;
@@ -454,7 +450,7 @@ input[type=button], input[type=submit], input[type=reset] {
   margin: 0 0 20px;
   width: 15%;
   padding: 7px;
-  font-family: 'Departure Mono';
+  font-family: 'Departure';
   font-weight: bold;
   color: var(--background-color) !important;
   background: var(--text-color-link-active);
