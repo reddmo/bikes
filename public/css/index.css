@@ -405,9 +405,7 @@ header {
 }
 
 /* Blogroll */
-/*  .roll {
-    margin-bottom: var(--space-3);
-  } */
+
 .blogroll a {
     text-decoration: none;
 }
@@ -418,6 +416,7 @@ header {
     text-underline-offset: 2px;
     color: var(--text-color);
 }
+
 
 .blogroll:hover {
    outline: 1px solid var(--text-color-link-active);

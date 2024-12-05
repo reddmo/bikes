@@ -4,26 +4,27 @@ eleventyNavigation:
   order: 6
 ---
 <h1>Blogroll</h1>
-<ul>
+<div>
 {% for blog in blogData %}
-    <img alt="none" src="{{ blog.favicon }}" width="32" height="32" loading="lazy" decoding="async" />
-    <li>
+<br>
+    <img alt="none" src="{{ blog.favicon }}">
+
         <h2>
             <a href="{{ blog.url | url }}" target="_blank" class="blogroll" style="text-decoration: none;">
                 {{ blog.name }}
             </a>
         </h2>
-        {{ blog.cleansedUrl }}<br>
+        {{ blog.cleansedUrl }}
 
         {% if blog.latestPost and blog.latestPost.title %}
-            <span style="color: var(--text-color-link-active)">
+          <p>  <span style="color: var(--text-color-link-active)">
                 <b>Latest post:</b>
             </span>
-            <a href="{{ blog.latestPost.url | url }}" target="_blank" class="blogpost">
+          <a href="{{ blog.latestPost.url | url }}" target="_blank" class="blogpost">
                 {{ blog.latestPost.title }}
-            </a><br /><hr><br />
+            </a></p><br>
         {% endif %}
-    </li>
+<hr>
 {% endfor %}
-</ul>
 
+</div>
