@@ -403,3 +403,31 @@ header {
   gap: 1.5rem;
   padding-left: 0;
 }
+
+/* Blogroll */
+/*  .roll {
+    margin-bottom: var(--space-3);
+  } */
+.blogroll a {
+    text-decoration: none;
+}
+
+.blogpost a {
+    text-decoration-color: var(--text-color-link);
+    text-decoration-thickness: .150em;
+    text-underline-offset: 2px;
+    color: var(--text-color);
+}
+
+.blogroll:hover {
+   outline: 1px solid var(--text-color-link-active);
+   background-color: var(--text-color-link-active);
+   color: var(--background-color) !important;
+   text-decoration: none;
+}
+
+.blogpost:hover {
+    color: var(--text-color);
+    text-decoration-color: var(--text-color-link-active);
+    text-underline-offset: 4px;
+}

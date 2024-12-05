@@ -1,0 +1,64 @@
+{
+    "blogroll": [
+      {
+        "name": "11tybundle",
+        "url": "https://11tybundle.dev",
+        "feed": "https://11tybundle.dev/feed.xml"
+      },
+      {
+        "name": "Ben Myers",
+        "url": "https://benmyers.dev/",
+        "feed": "https://benmyers.dev/feed.xml"
+      },
+      {
+        "name": "Cory Dransfeldt",
+        "url": "https://coryd.dev",
+        "feed": "https://feedpress.me/coryd"
+      },
+      {
+        "name": "Lene Saile",
+        "url": "https://www.lenesaile.com",
+        "feed": "https://www.lenesaile.com/en/feed.xml"
+      },
+      {
+        "name": "Eleventy Excellent",
+        "url": "https://eleventy-excellent.netlify.app",
+        "feed": "https://eleventy-excellent.netlify.app/feed.xml"
+      },
+      {
+        "name": "Zach Leatherman",
+        "url": "https://www.zachleat.com",
+        "feed": "https://www.zachleat.com/web/feed/"
+      },
+      {
+        "name": "Sia Karamalegos",
+        "url": "https://sia.codes",
+        "feed": "https://sia.codes/feed/feed.xml"
+      },
+      {
+        "name": "Chris Burnell",
+        "url": "https://chrisburnell.com",
+        "feed": "https://chrisburnell.com/feed.xml"
+      },
+      {
+        "name": "Max Böck",
+        "url": "https://mxb.dev",
+        "feed": "https://mxb.dev/feed.xml"
+      },
+      {
+        "name": "Robb Knight",
+        "url": "https://rknight.me",
+        "feed": "https://rknight.me/subscribe/posts/rss.xml"
+      },
+      {
+        "name": "Miriam Eric Suzanne",
+        "url": "https://www.miriamsuzanne.com",
+        "feed": "https://www.miriamsuzanne.com/feed.xml"
+      },
+      {
+        "name": "Sophie Koonin",
+        "url": "https://localghost.dev",
+        "feed": "https://localghost.dev/feed.xml"
+      }
+    ]
+}

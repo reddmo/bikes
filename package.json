@@ -55,6 +55,8 @@
 		"markdown-it": "^14.1.0",
 		"markdown-it-github-alerts": "^0.3.0",
 		"node-fetch": "^3.3.2",
-		"path": "^0.12.7"
+		"normalize-url": "^8.0.1",
+		"path": "^0.12.7",
+		"rss-parser": "^3.13.0"
 	}
 }
