@@ -64,7 +64,7 @@ import 'markdown-it-github-alerts/styles/github-base.css'
 		--text-color-link: #ff6a3d;
 		--text-color-link-active: #f4db7d;
 		--text-color-link-visited: #9daaf2;
-		--border-color: #ff6a3d;
+		--border-color: #f4db7d;
 		--background-color: #1a2238;
 	}
 }
@@ -207,7 +207,7 @@ main :first-child {
 }
 
 header {
-	border-bottom: 2px solid var(--border-color);
+	border-bottom: 2px dashed var(--border-color);
 }
 header:after {
 	content: "";
@@ -438,9 +438,9 @@ input,
 textarea {
   margin: 0 0 10px;
   padding: 5px 10px;
-  color: var(--text-color);
+  color: var(--text-color) !important;
   background: var(--background-color);
-  border: 2px solid var(--text-color-link);
+  border: 2px solid var(--text-color-link-visited);
   border-radius: 5px;
   font-family: 'Departure Mono';
 }
@@ -452,11 +452,13 @@ textarea {
 }
 input[type=button], input[type=submit], input[type=reset] {
   margin: 0 0 20px;
+  width: 15%;
   padding: 7px;
   font-family: 'Departure Mono';
   font-weight: bold;
-  color: var(--background-color);
+  color: var(--background-color) !important;
   background: var(--text-color-link-active);
+  border: 2px solid var(--text-color-link);
   border-radius: 5px;
   cursor: pointer;
 }
@@ -464,6 +466,8 @@ input[type=button], input[type=submit], input[type=reset] {
 #guestbooks___guestbook-messages-container blockquote {
   margin: -5px 0 40px;
   padding: 20px 30px;
+  color: var(--background-color);
+  background-color: var(--text-color-link-visited);
 
 }
 #guestbooks___guestbook-messages-header {
