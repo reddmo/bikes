@@ -53,7 +53,7 @@ export default async function(eleventyConfig) {
     "class": "custom-class",
     "align-item": "center",
     "stroke": "currentColor",
-    "stroke-width": 4
+    "stroke-width": 6
   });
 
   eleventyConfig.addShortcode("lucide", function(eleventyLucideicons) { /* … */ });

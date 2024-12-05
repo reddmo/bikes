@@ -430,3 +430,48 @@ header {
     text-decoration-color: var(--text-color-link-active);
     text-underline-offset: 4px;
 }
+
+/* Guestbook */
+
+input,
+textarea {
+  margin: 0 0 10px;
+  padding: 5px 10px;
+  color: var(--text-color);
+  background: var(--background-color);
+  border: 2px solid var(--text-color-link);
+  border-radius: 5px;
+  font-family: 'Departure Mono';
+}
+input {
+  width: 55%;
+}
+textarea {
+  width: 95%;
+}
+input[type=button], input[type=submit], input[type=reset] {
+  margin: 0 0 20px;
+  padding: 7px;
+  font-family: 'Departure Mono';
+  font-weight: bold;
+  color: var(--background-color);
+  background: var(--text-color-link-active);
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#guestbooks___guestbook-messages-container blockquote {
+  margin: -5px 0 40px;
+  padding: 20px 30px;
+
+}
+#guestbooks___guestbook-messages-header {
+  margin:25px 0;
+}
+#guestbooks___input-container {
+  color: var(--text-color);
+}
+#guestbooks___guestbook-messages-header::before {
+  margin-right: 8px;
+  content: '💬';
+}
