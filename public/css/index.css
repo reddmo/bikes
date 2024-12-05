@@ -295,10 +295,11 @@ header {
 
 /* Nav */
 .nav {
-	display: flex;
+	display: inline-block;
 	padding: 0;
 	margin: 0;
 	list-style: none;
+	overflow: wrap;
 }
 .nav-item {
 	display: inline-block;
