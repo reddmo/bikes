@@ -91,7 +91,27 @@
   		<path d="M4 11a9 9 0 0 1 9 9" />
 			</svg></a></li>
 			</ul>
+
 			<p style="color: var(--text-color-link)">Built with <a href="https://www.11ty.dev/">{{ eleventy.generator }}</a></p>
+
+			<script>const html = document.querySelector('html');
+
+			// three functions used by buttons and radios
+			function switchAuto() {
+  		html.style.setProperty("color-scheme", "light dark");
+			}
+			function switchLight() {
+  		html.style.setProperty("color-scheme", "light");
+			}
+			function switchDark() {
+  		html.style.setProperty("color-scheme", "dark");
+			}</script>
+			<center><p>
+ 		  <button id="autoSwitch" type="button" onclick="switchAuto()">Auto</button>
+  		<button id="lightSwitch" type="button" onclick="switchLight()">Light</button>
+  		<button id="darkSwitch" type="button" onclick="switchDark()">Dark</button>
+			</p></center>
+
 		</footer>
 
 		<!-- This page `{{ page.url | htmlBaseUrl }}` was built on {% currentBuildDate %} -->
