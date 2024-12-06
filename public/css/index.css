@@ -48,22 +48,18 @@
   --font-size-lg: clamp(1.56rem, calc(1.41rem + 0.76vw), 2rem);
   --font-size-xl: clamp(1.95rem, calc(1.71rem + 1.24vw), 2.66rem);
   --font-size-xxl: clamp(2.44rem, calc(2.05rem + 1.93vw), 3.55rem);
+
+  --space-1: 0.35rem;
+  --space-2: 0.5rem;
+  --space-3: 1rem;
+  --space-4: 1.5rem;
+  --space-5: 2rem;
+  --space-6: 2.5rem;
+  --space-7: 3rem;
+  --space-8: 4rem;
+  --space-9: 5rem;
+  --space-10: 6rem;
 }
-
-/*@media (prefers-color-scheme: dark) {
-	:root {
-		--color-gray-20: #e0e0e0;
-		--color-gray-50: #C0C0C0;
-		--color-gray-90: #dad8d8;
-
-		--text-color: #f2f6f7;
-		--text-color-link: #ff6a3d;
-		--text-color-link-active: #f4db7d;
-		--text-color-link-visited: #9daaf2;
-		--border-color: #f4db7d;
-		 --background-color: #1a2238;
-	}
-} */
 
 /* Global stylesheet */
 * {
