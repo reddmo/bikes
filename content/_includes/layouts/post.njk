@@ -31,6 +31,7 @@ if (document.querySelector("body").classList.contains("post")) {
     }
   }
 
+
   async function fetchInteractions(headerTitle) {
     const response = await fetch("https://webmention.io/api/mentions.jf2?target=3AkC5K7teZuoGe3NvSNphw" + document.URL);
     const data = await response.json();
