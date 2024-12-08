@@ -166,11 +166,11 @@ a[href]:active {
   text-underline-offset: .18rem;
 }
 
-/* blockquote {
+blockquote {
 	padding: 0 1em;
   color: var(--color-gray-90);
   border-left: 0.25em solid var(--text-color-link-active);
-} */
+}
 
 
 button {
@@ -205,7 +205,8 @@ footer {
 	padding: 1.25rem;
 }
 main :first-child {
-	margin-top: .5rem;
+	margin-top: 0.5rem;
+	margin-bottom: 0.5rem;
 }
 
 header {
@@ -271,6 +272,8 @@ pre:not([class*="language-"]) {
 }
 code {
 	word-break: break-all;
+	background-color: var(--color-gray-90);
+	color: var(--background-color);
 }
 
 /* Header */
@@ -487,16 +490,18 @@ input[type=button], input[type=submit], input[type=reset] {
 .markdown-alert {
   padding: 0.5rem 1rem;
   margin-bottom: 16px;
-  color: inherit;
+  color: var(--text-color-link-active);
   border-left: .25em solid #888;
+  word-break: break-word;
+  text-wrap: balance;
 }
 
 .markdown-alert>:first-child {
-  margin-top: 0
+  margin-top: 0 !important;
 }
 
 .markdown-alert>:last-child {
-  margin-bottom: 0
+  margin-bottom: 0;
 }
 
 .markdown-alert .markdown-alert-title {
@@ -510,7 +515,7 @@ input[type=button], input[type=submit], input[type=reset] {
   margin-right: 0.5rem;
   display: inline-block;
   overflow: visible !important;
-  vertical-align: text-bottom;
+  vertical-align: baseline;
   fill: currentColor;
 }
 

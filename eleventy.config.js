@@ -21,7 +21,7 @@ let opt = {
 };
 
 const md = markdownit(opt);
-md.use(markdownItGitHubAlerts);
+	md.use(markdownItGitHubAlerts);
 
 /** @param {import("@11ty/eleventy").UserConfig} eleventyConfig */
 export default async function(eleventyConfig) {
