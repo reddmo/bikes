@@ -47,6 +47,7 @@
 	},
 	"dependencies": {
 		"@11ty/eleventy-fetch": "^5.0.1",
+		"@chrisburnell/eleventy-cache-webmentions": "^2.1.8",
 		"@grimlink/eleventy-plugin-lucide-icons": "^2.1.1",
 		"@zachleat/heading-anchors": "^1.0.1",
 		"axios": "^1.7.7",

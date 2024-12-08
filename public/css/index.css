@@ -475,3 +475,43 @@ input[type=button], input[type=submit], input[type=reset] {
   margin-right: 8px;
   content: '💬';
 }
+
+/* Webmentions */
+.webmentions {
+  grid-column: popout;
+  margin-block-start: var(--space-4);
+}
+
+.mention-image {
+  border: 2px solid var(--text-color-link);
+  border-radius: 6px !important;
+  height: 3.5em !important;
+  width: 3.5em !important;
+  margin-bottom: var(--space-4);
+}
+
+.mention-image:is(:hover, :focus) {
+  border: 2px solid var(--text-color-link-active);
+}
+
+.likes,
+.reposts {
+	display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(3.4rem, max-content));
+  grid-gap: 2rem;
+  flex-wrap: wrap;
+  margin-block-end: var(--space-3);
+  row-gap: var(--space-1);
+}
+
+.likes a:has(img),
+.reposts a:has(img) {
+  border: none;
+    /* margin: 7px; */
+}
+
+.likes a:after,
+.reposts a:after {
+  border: none;
+  background-image: none !important;
+}
