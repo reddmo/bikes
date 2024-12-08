@@ -4,7 +4,9 @@ description: Getting webmentions up and running on 11ty - update!
 date: 2024-06-19
 tags: ['11ty', 'webmentions']
 ---
-> <mark class="highlight">**Update 08/02/2024: I updated the code in this post to show the changes with Eleventy 3.0.0.alpha & my simplified(?) `eleventy.config.js`. Additionally, added a cleaned up `webmentions.js` example.**</mark>
+> [!NOTE]
+> Update 08/02/2024
+> I updated the code in this post to show the changes with Eleventy 3.0.0.alpha & my simplified(?) `eleventy.config.js`. Additionally, added a cleaned up `webmentions.js` example.**</mark>
 
 I have been struggling getting webmentions working on the site. It's worth noting that I don't have many yet, but I like to think I'm preparing for the future.
 

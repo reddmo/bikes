@@ -13,11 +13,15 @@ import pluginWebmentions from '@chrisburnell/eleventy-cache-webmentions';
 
 import pluginFilters from "./_config/filters.js";
 
-const md = markdownit({
-  html: true,
-  linkify: true,
-  typographer: true
-})
+let opt = {
+ html: true,
+ breaks: true,
+ linkify: true,
+ typographer: true
+};
+
+const md = markdownit(opt);
+md.use(markdownItGitHubAlerts);
 
 /** @param {import("@11ty/eleventy").UserConfig} eleventyConfig */
 export default async function(eleventyConfig) {
@@ -42,6 +46,9 @@ export default async function(eleventyConfig) {
 	eleventyConfig.addBundle("css");
 	// Adds the {% js %} paired shortcode
 	eleventyConfig.addBundle("js");
+
+
+	eleventyConfig.setLibrary('md', md);
 
 	// Official plugins
 	eleventyConfig.addPlugin(pluginSyntaxHighlight, {
@@ -162,4 +169,3 @@ export const config = {
 
 	// pathPrefix: "/",
 };
-
