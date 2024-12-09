@@ -102,24 +102,32 @@
 
 			<p style="color: var(--text-color-link)">Built with <a href="https://www.11ty.dev/">{{ eleventy.generator }}</a></p>
 
-			<script>const html = document.querySelector('html');
-
-			// three functions used by buttons and radios
-			function switchAuto() {
-  		html.style.setProperty("color-scheme", "light dark");
-			}
-			function switchLight() {
-  		html.style.setProperty("color-scheme", "light");
-			}
-			function switchDark() {
-  		html.style.setProperty("color-scheme", "dark");
-			}</script>
 			<center><p>
-			<section class="scheme-switcher" aria-label="Color scheme switcher">
- 		  <button class="color-scheme" id="autoSwitch" type="button" onclick="switchAuto()">Auto</button>
-  		<button class="color-scheme" id="lightSwitch" type="button" onclick="switchLight()">Light</button>
-  		<button class="color-scheme" id="darkSwitch" type="button" onclick="switchDark()">Dark</button>
-			</section></p></center>
+ 		  <button id="autoSwitch" type="button" onclick="switchAuto()">Auto</button>
+  		<button id="lightSwitch" type="button" onclick="switchLight()">Light</button>
+  		<button id="darkSwitch" type="button" onclick="switchDark()">Dark</button>
+			</p></center>
+
+<script>const html = document.querySelector("html");
+const mode = localStorage.getItem("mode");
+
+if (mode === "light") switchLight();
+if (mode === "dark") switchDark();
+
+function switchAuto() {
+  html.style.setProperty("color-scheme", "light dark");
+  localStorage.removeItem("mode");
+}
+
+function switchLight() {
+  html.style.setProperty("color-scheme", "light");
+  localStorage.setItem("mode", "light");
+}
+
+function switchDark() {
+  html.style.setProperty("color-scheme", "dark");
+  localStorage.setItem("mode", "dark");
+}</script>
 
 		</footer>
 

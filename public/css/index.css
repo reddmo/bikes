@@ -77,6 +77,10 @@
 	navigation: auto;
 }
 
+html {
+	color-scheme: light dark;
+}
+
 html,
 body {
 	padding: 0;
@@ -87,7 +91,6 @@ body {
 	text-wrap: pretty;
 }
 html {
-	color-scheme: light dark;
 	overflow-y: scroll;
 }
 body {
@@ -172,15 +175,7 @@ blockquote {
   border-left: 0.25em solid var(--text-color-link-active);
 }
 
-.scheme-switcher {
-    display: flex;
-    padding: 0.125em;
-    width: fit-content;
-    border: 0.125em solid var(--text-color-link-visited);
-    border-radius: calc(infinity* 1px);
-}
-
-/* button {
+button {
 	display: inline-block;
   background-color: var(--text-color-link) !important;
   color: var(--background-color);
@@ -193,19 +188,7 @@ blockquote {
   font-family: 'Departure';
   line-height: 1.15em;
   cursor: pointer;
-} */
-
-.color-scheme {
-    margin: 0;
-    padding-block: 0.25em;
-    padding-inline: 0.5em;
-    border: none;
-    border-radius: calc(infinity* 1px);
-    background-color: transparent;
-    cursor: pointer;
-    color: var(--text-color-link-visited);
-    font-family: 'Departure';
-  }
+}
 
 button a {
     text-decoration: none !important;
@@ -215,9 +198,8 @@ button:hover,
 button:focus {
   background-color: var(--text-color-link-active) !important;
   color: var(--background-color);
-  border: none;
+  border: 2px solid var(--text-color-link);
 }
-
 
 main,
 footer {
