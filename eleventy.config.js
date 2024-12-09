@@ -63,7 +63,7 @@ export default async function(eleventyConfig) {
   // Enable the WebC plugin to handle .webc files
   eleventyConfig.addPlugin(WebCPlugin, {
     // Options for WebC can be added here if needed, for example:
-    components: "./content/_includes"
+    components: "./content/_includes/components/**/*.webc"
   });
 
 	eleventyConfig.addPlugin(EleventyRenderPlugin);
