@@ -1,4 +1,5 @@
 import { IdAttributePlugin, InputPathToUrlTransformPlugin, HtmlBasePlugin } from "@11ty/eleventy";
+import { EleventyRenderPlugin } from "@11ty/eleventy";
 import { feedPlugin } from "@11ty/eleventy-plugin-rss";
 import pluginSyntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
 import pluginNavigation from "@11ty/eleventy-navigation";
@@ -8,164 +9,133 @@ import markdownit from "markdown-it";
 import markdownItGitHubAlerts from 'markdown-it-github-alerts';
 import setLibrary from 'markdown-it-github-alerts';
 import eleventyLucideicons from "@grimlink/eleventy-plugin-lucide-icons";
-
-
 import pluginFilters from "./_config/filters.js";
+import WebCPlugin from "@11ty/eleventy-plugin-webc";
 
 let opt = {
- html: true,
- breaks: true,
- linkify: true,
- typographer: true
+  html: true,
+  breaks: true,
+  linkify: true,
+  typographer: true
 };
 
 const md = markdownit(opt);
-	md.use(markdownItGitHubAlerts);
+md.use(markdownItGitHubAlerts);
 
 /** @param {import("@11ty/eleventy").UserConfig} eleventyConfig */
 export default async function(eleventyConfig) {
-	// Copy the contents of the `public` folder to the output folder
-	// For example, `./public/css/` ends up in `_site/css/`
-	eleventyConfig
-		.addPassthroughCopy({
-			"./public/": "/",
-			"./node_modules/prismjs/themes/prism-okaidia.css": "/css/prism-okaidia.css"
-		})
-		.addPassthroughCopy("./content/feed/pretty-atom-feed.xsl");
+
+  // Copy the contents of the `public` folder to the output folder
+  eleventyConfig
+    .addPassthroughCopy({
+      "./public/": "/",
+      "./node_modules/prismjs/themes/prism-okaidia.css": "/css/prism-okaidia.css"
+    })
+    .addPassthroughCopy("./content/feed/pretty-atom-feed.xsl");
   eleventyConfig.addPassthroughCopy("./content/assets/fonts");
- // eleventyConfig.addPassthroughCopy("./content/blog/attributes_output.json");
-	// Run Eleventy when these files change:
-	// https://www.11ty.dev/docs/watch-serve/#add-your-own-watch-targets
 
-	// Watch content images for the image pipeline.
-	eleventyConfig.addWatchTarget("content/**/*.{svg,webp,png,jpeg}");
+  // Watch content images for the image pipeline
+  eleventyConfig.addWatchTarget("content/**/*.{svg,webp,png,jpeg}");
 
-	// Per-page bundles, see https://github.com/11ty/eleventy-plugin-bundle
-	// Adds the {% css %} paired shortcode
-	eleventyConfig.addBundle("css");
-	// Adds the {% js %} paired shortcode
-	eleventyConfig.addBundle("js");
+  // Per-page bundles (e.g. {% css %} and {% js %} shortcodes)
+  eleventyConfig.addBundle("css");
+  eleventyConfig.addBundle("js");
 
-	// Adds Markdown GitHub Alerts
-	eleventyConfig.setLibrary('md', md);
+  // Add Markdown GitHub Alerts
+  eleventyConfig.setLibrary('md', md);
 
-	// Official plugins
-	eleventyConfig.addPlugin(pluginSyntaxHighlight, {
-		preAttributes: { tabindex: 0 }
-	});
-	eleventyConfig.addPlugin(pluginNavigation);
-	eleventyConfig.addPlugin(HtmlBasePlugin);
-	eleventyConfig.addPlugin(InputPathToUrlTransformPlugin);
-  eleventyConfig.addPlugin(eleventyLucideicons,{
+  // Official Eleventy plugins
+  eleventyConfig.addPlugin(pluginSyntaxHighlight, {
+    preAttributes: { tabindex: 0 }
+  });
+  eleventyConfig.addPlugin(pluginNavigation);
+  eleventyConfig.addPlugin(HtmlBasePlugin);
+  eleventyConfig.addPlugin(InputPathToUrlTransformPlugin);
+  eleventyConfig.addPlugin(eleventyLucideicons, {
     "class": "custom-class",
     "align-item": "center",
     "stroke": "currentColor",
     "stroke-width": 6
   });
 
-	// Atom Feed
-	eleventyConfig.addPlugin(feedPlugin, {
-		outputPath: "/feed/feed.xml",
-		stylesheet: "pretty-atom-feed.xsl",
-		templateData: {
-			eleventyNavigation: {
-				key: "Feed",
-				order: 5
-			}
-		},
-		collection: {
-			name: "posts",
-			limit: 10,
-		},
-		metadata: {
-			language: "en",
-			title: "stuff&things",
-			subtitle: "Just some stuff about things.",
-			base: "https://stuffandthings.lol/",
-			author: {
-				name: "Jason"
-			}
-		}
-	});
+  // Enable the WebC plugin to handle .webc files
+  eleventyConfig.addPlugin(WebCPlugin, {
+    // Options for WebC can be added here if needed, for example:
+    components: "./content/_includes"
+  });
 
-	// Image optimization: https://www.11ty.dev/docs/plugins/image/#eleventy-transform
-	eleventyConfig.addPlugin(eleventyImageTransformPlugin, {
-		// File extensions to process in _site folder
-		extensions: "html",
+	eleventyConfig.addPlugin(EleventyRenderPlugin);
 
-		// Output formats for each image.
-		formats: ["avif", "webp", "jpg", "png", "auto"],
+  // Atom Feed Plugin
+  eleventyConfig.addPlugin(feedPlugin, {
+    outputPath: "/feed/feed.xml",
+    stylesheet: "pretty-atom-feed.xsl",
+    templateData: {
+      eleventyNavigation: {
+        key: "Feed",
+        order: 5
+      }
+    },
+    collection: {
+      name: "posts",
+      limit: 10,
+    },
+    metadata: {
+      language: "en",
+      title: "stuff&things",
+      subtitle: "Just some stuff about things.",
+      base: "https://stuffandthings.lol/",
+      author: {
+        name: "Jason"
+      }
+    }
+  });
 
-		widths: ["auto"],
+  // Image optimization
+  eleventyConfig.addPlugin(eleventyImageTransformPlugin, {
+    extensions: "html",
+    formats: ["avif", "webp", "jpg", "png", "auto"],
+    widths: ["auto"],
+    defaultAttributes: {
+      loading: "lazy",
+      decoding: "async",
+    }
+  });
 
-		defaultAttributes: {
-			// e.g. <img loading decoding> assigned on the HTML tag will override these values.
-			loading: "lazy",
-			decoding: "async",
-		}
-	});
+  // Filters Plugin
+  eleventyConfig.addPlugin(pluginFilters);
 
-	// Filters
-	eleventyConfig.addPlugin(pluginFilters);
+  // ID Attribute Plugin
+  eleventyConfig.addPlugin(IdAttributePlugin);
 
-	eleventyConfig.addPlugin(IdAttributePlugin, {
-		// by default we use Eleventy’s built-in `slugify` filter:
-		// slugify: eleventyConfig.getFilter("slugify"),
-		// selector: "h1,h2,h3,h4,h5,h6", // default
-	});
+  // Shortcode for current build date
+  eleventyConfig.addShortcode("currentBuildDate", () => {
+    return (new Date()).toISOString();
+  });
 
-	eleventyConfig.addShortcode("currentBuildDate", () => {
-		return (new Date()).toISOString();
-	});
-
-	// Adds Lucide icons shortcode
+  // Lucide icons shortcode
   eleventyConfig.addShortcode("lucide", function(eleventyLucideicons) { /* … */ });
-
-	// Features to make your build faster (when you need them)
-
-	// If your passthrough copy gets heavy and cumbersome, add this line
-	// to emulate the file copy on the dev server. Learn more:
-	// https://www.11ty.dev/docs/copy/#emulate-passthrough-copy-during-serve
-
-	// eleventyConfig.setServerPassthroughCopyBehavior("passthrough");
-};
+}
 
 export const config = {
-	// Control which files Eleventy will process
-	// e.g.: *.md, *.njk, *.html, *.liquid
-	templateFormats: [
-		"md",
-		"njk",
-		"html",
-		"liquid",
-		"11ty.js",
-	],
+  templateFormats: [
+    "md",
+    "njk",
+    "html",
+    "liquid",
+    "11ty.js",
+    "webc"  // Add webc template format
+  ],
 
-	// Pre-process *.md files with: (default: `liquid`)
-	markdownTemplateEngine: "njk",
+  markdownTemplateEngine: "njk",  // For .md files
+  htmlTemplateEngine: "njk",     // For .html files
+  webcTemplateEngine: "webc",    // For .webc files
 
-	// Pre-process *.html files with: (default: `liquid`)
-	htmlTemplateEngine: "njk",
-
-	// These are all optional:
-	dir: {
-		input: "content",          // default: "."
-		includes: "/_includes",  // default: "_includes" (`input` relative)
-		svg: "/svg",
-		data: "/_data",          // default: "_data" (`input` relative)
-		output: "_site"
-	},
-
-	// -----------------------------------------------------------------
-	// Optional items:
-	// -----------------------------------------------------------------
-
-	// If your site deploys to a subdirectory, change `pathPrefix`.
-	// Read more: https://www.11ty.dev/docs/config/#deploy-to-a-subdirectory-with-a-path-prefix
-
-	// When paired with the HTML <base> plugin https://www.11ty.dev/docs/plugins/html-base/
-	// it will transform any absolute URLs in your HTML to include this
-	// folder name and does **not** affect where things go in the output folder.
-
-	// pathPrefix: "/",
+  dir: {
+    input: "content",            // Where content lives
+    includes: "/_includes",     // Where includes (such as WebC components) are
+    svg: "/svg",
+    data: "/_data",             // Global data
+    output: "_site"             // Output directory
+  },
 };
