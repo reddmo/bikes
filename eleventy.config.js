@@ -20,8 +20,9 @@ let opt = {
   typographer: true
 };
 
-const md = markdownit(opt);
-md.use(markdownItGitHubAlerts);
+const md = markdownit(opt)
+  .use(markdownItGitHubAlerts)
+  .use(markdownItFootnote);
 
 /** @param {import("@11ty/eleventy").UserConfig} eleventyConfig */
 export default async function(eleventyConfig) {
