@@ -8,7 +8,6 @@ import markdownit from "markdown-it";
 import markdownItGitHubAlerts from 'markdown-it-github-alerts';
 import setLibrary from 'markdown-it-github-alerts';
 import eleventyLucideicons from "@grimlink/eleventy-plugin-lucide-icons";
-import pluginWebmentions from '@chrisburnell/eleventy-cache-webmentions';
 
 
 import pluginFilters from "./_config/filters.js";
@@ -47,7 +46,7 @@ export default async function(eleventyConfig) {
 	// Adds the {% js %} paired shortcode
 	eleventyConfig.addBundle("js");
 
-
+	// Adds Markdown GitHub Alerts
 	eleventyConfig.setLibrary('md', md);
 
 	// Official plugins
@@ -63,8 +62,6 @@ export default async function(eleventyConfig) {
     "stroke": "currentColor",
     "stroke-width": 6
   });
-
-  eleventyConfig.addShortcode("lucide", function(eleventyLucideicons) { /* … */ });
 
 	// Atom Feed
 	eleventyConfig.addPlugin(feedPlugin, {
@@ -120,6 +117,9 @@ export default async function(eleventyConfig) {
 	eleventyConfig.addShortcode("currentBuildDate", () => {
 		return (new Date()).toISOString();
 	});
+
+	// Adds Lucide icons shortcode
+  eleventyConfig.addShortcode("lucide", function(eleventyLucideicons) { /* … */ });
 
 	// Features to make your build faster (when you need them)
 

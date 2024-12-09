@@ -59,6 +59,11 @@
         "name": "Sophie Koonin",
         "url": "https://localghost.dev",
         "feed": "https://localghost.dev/feed.xml"
+      },
+      {
+        "name": "annie's blog",
+        "url": "https://anniemueller.com",
+        "feed": "https://anniemueller.com/posts_feed"
       }
     ]
 }
