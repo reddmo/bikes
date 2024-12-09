@@ -32,7 +32,11 @@ export default async function(eleventyConfig) {
       "./node_modules/prismjs/themes/prism-okaidia.css": "/css/prism-okaidia.css"
     })
     .addPassthroughCopy("./content/feed/pretty-atom-feed.xsl");
-  eleventyConfig.addPassthroughCopy("./content/assets/fonts");
+  // eleventyConfig.addPassthroughCopy("./content/assets/fonts");
+  eleventyConfig.addPassthroughCopy("inclusive-sans-latin-400-normal.woff2");
+  eleventyConfig.addPassthroughCopy("inclusive-sans-latin-400-italic.woff2");
+  eleventyConfig.addPassthroughCopy("DepartureMono-Regular.woff2");
+
 
   // Watch content images for the image pipeline
   eleventyConfig.addWatchTarget("content/**/*.{svg,webp,png,jpeg}");
