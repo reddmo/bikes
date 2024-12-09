@@ -8,6 +8,7 @@ import 'dotenv/config';
 import markdownit from "markdown-it";
 import markdownItGitHubAlerts from 'markdown-it-github-alerts';
 import setLibrary from 'markdown-it-github-alerts';
+import markdownItFootnote from 'markdown-it-footnote';
 import eleventyLucideicons from "@grimlink/eleventy-plugin-lucide-icons";
 import pluginFilters from "./_config/filters.js";
 import WebCPlugin from "@11ty/eleventy-plugin-webc";
