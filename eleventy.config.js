@@ -24,6 +24,12 @@ const md = markdownit(opt)
   .use(markdownItGitHubAlerts)
   .use(markdownItFootnote);
 
+  md.renderer.rules.footnote_block_open = () => (
+    '<section class="footnotes">\n' +
+    '<h4>Footnotes</h4>\n' +
+    '<ol class="footnotes-list">\n' 
+  );
+
 /** @param {import("@11ty/eleventy").UserConfig} eleventyConfig */
 export default async function(eleventyConfig) {
 

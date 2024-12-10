@@ -299,6 +299,10 @@ header {
 	text-decoration: none;
 }
 
+.footnotes {
+	border-top: 2px solid var(--text-color-link-visited) !important;
+}
+
 /* Nav */
 .nav {
 	display: inline-block;
