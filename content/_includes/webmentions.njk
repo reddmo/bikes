@@ -1,0 +1,25 @@
+<div class="webmentions" id="webmentions">
+  {% if mentions.comments %}
+  <h3>Comments ({{ mentions.comments | length }})</h3>
+  <div class="comments">
+    {% for item in mentions.comments %}
+      <div class="comment">
+        <a href="{{ item.author.url }}" class="comment-author"><img src="{{ item.author.photo}}" class="mention-image" alt="photo of the author of one of the webmentions for this page"></a>
+        <p class="comment-content">{{ item.content | safe }}</p>
+        <p class="comment-date">{{ item.published | plainDate }}</p>
+      </div>
+    {% endfor %}
+  </div>
+  {% endif %}
+
+  {% if mentions.likes %}
+    <h2 class="webm">Likes ({{ mentions.likes | length }}) & Reposts ({{ mentions.reposts | length }})</h2><br>
+    <div class="likes">
+      {% for item in mentions.likes %}
+        <a href="{{ item.url }}"><img src="{{ item.photo }}" class="mention-image" alt="photo of the author of one of the webmentions for this page"></a>
+      {% endfor %}
+      {% for item in mentions.reposts %}
+        <a href="{{ item.url }}"><img src="{{ item.photo }}" class="mention-image" alt="photo of the author of one of the webmentions for this page"></a>
+      {% endfor %}
+    </div>
+{% endif %}

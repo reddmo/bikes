@@ -13,6 +13,8 @@ import { full as emoji } from 'markdown-it-emoji';
 import eleventyLucideicons from "@grimlink/eleventy-plugin-lucide-icons";
 import pluginFilters from "./_config/filters.js";
 import WebCPlugin from "@11ty/eleventy-plugin-webc";
+import sanitizeHTML from 'sanitize-html';
+import dayjs from 'dayjs';
 
 let opt = {
   html: true,
@@ -69,6 +71,10 @@ export default async function(eleventyConfig) {
     "stroke": "currentColor",
     "stroke-width": 6
   });
+
+  // Webmentions
+  eleventyConfig.addFilter("webmentionsByUrl", webmentionsByUrl);
+  eleventyConfig.addFilter("plainDate", plainDate);
 
   // Enable the WebC plugin to handle .webc files
   eleventyConfig.addPlugin(WebCPlugin, {
@@ -150,4 +156,62 @@ export const config = {
     data: "/_data",             // Global data
     output: "_site"             // Output directory
   },
+};
+
+// Convert a date string to ISO string using dayjs
+export const toISOString = dateString => dayjs(dateString).toISOString();
+
+// Filter and sort webmentions by URL, and sanitize HTML content
+export const webmentionsByUrl = (webmentions, url) => {
+  const allowedTypes = {
+    likes: ["like-of"],
+    reposts: ["repost-of"],
+    comments: ["mention-of", "in-reply-to"],
+  };
+
+  const sanitize = (entry) => {
+    if (entry.content && entry.content.html) {
+      entry.content = sanitizeHTML(entry.content.html, {
+        allowedTags: ["b", "i", "em", "strong", "a"],
+      });
+    }
+    return entry;
+  };
+
+  const pageWebmentions = webmentions
+    .filter(
+      (mention) => mention["wm-target"] === "https://stuffandthings.lol" + url
+    )
+    .sort((a, b) => new Date(b.published) - new Date(a.published))
+    .map(sanitize);
+
+  const likes = pageWebmentions
+    .filter((mention) => allowedTypes.likes.includes(mention["wm-property"]))
+    .filter((like) => like.author)
+    .map((like) => like.author);
+
+  const reposts = pageWebmentions
+    .filter((mention) => allowedTypes.reposts.includes(mention["wm-property"]))
+    .filter((repost) => repost.author)
+    .map((repost) => repost.author);
+
+  const comments = pageWebmentions
+    .filter((mention) => allowedTypes.comments.includes(mention["wm-property"]))
+    .filter((comment) => {
+      const { author, published, content } = comment;
+      return author && author.name && published && content;
+    });
+
+  const mentionCount = likes.length + reposts.length + comments.length;
+  const data = { likes, reposts, comments, mentionCount };
+  return data;
+};
+
+
+// Create a plain date from an ISO date for webmentions
+export const plainDate = (isoDate) => {
+  let date = new Date(isoDate);
+  let options = { year: "numeric", month: "long", day: "numeric" };
+  let formattedDate = date.toLocaleDateString("en-US", options);
+  return formattedDate;
 };

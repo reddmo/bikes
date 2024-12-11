@@ -130,7 +130,7 @@ img,
 picture {
 	height: auto;
 	max-width: 100%;
-	display: block;
+	/* display: block; */
 	margin-left: auto;
 	margin-right: auto;
 }
@@ -205,10 +205,20 @@ main,
 footer {
 	padding: 1.25rem;
 }
-main :first-child {
+/* main :first-child {
 	margin-top: 0.5rem;
 	margin-bottom: 0.5rem;
-}
+}  */
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(
+    var(--grid-placement, auto-fit),
+    minmax(var(--grid-min-item-size, 16rem), 1fr));
+    gap: 2ch;
+    --grid-placement: auto-fit;
+    --grid-min-item-size: clamp(12rem, 50vw, 22rem);
+  }
 
 header {
 	border-bottom: 2px dashed var(--border-color);
