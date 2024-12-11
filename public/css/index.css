@@ -205,10 +205,10 @@ main,
 footer {
 	padding: 1.25rem;
 }
-/* main :first-child {
+main :first-child {
 	margin-top: 0.5rem;
 	margin-bottom: 0.5rem;
-}  */
+} 
 
 .grid {
     display: grid;

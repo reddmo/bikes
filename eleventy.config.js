@@ -68,8 +68,8 @@ export default async function(eleventyConfig) {
   eleventyConfig.addPlugin(eleventyLucideicons, {
     "class": "custom-class",
     "align-item": "center",
-    "stroke": "currentColor",
-    "stroke-width": 6
+    "margin-top": "2",
+    "stroke": "currentColor"
   });
 
   // Webmentions

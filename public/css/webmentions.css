@@ -2,6 +2,11 @@
     grid-column: popout;
     margin-block-start: var(--space-4);
   }
+
+  .webmentions :first-child {
+    margin-top: 0;
+    margin-bottom: 0;
+  } 
   
   .mention-image {
     border: 2px solid var(--text-color-link);

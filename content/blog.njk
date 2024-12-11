@@ -16,7 +16,7 @@ pagination:
 		<p><time class="postlist-date" datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate("dd LLLL yyyy") }}</time></p>
     <p>{{ post.data.description }}</p>
 
-    <p><a href="{{ post.url }}" class="button">Read more</a> {% lucide "move-right", { "width": "12", "height": "12" } %}</p>
+    <p><a href="{{ post.url }}" class="button">Read more</a> {% lucide "move-right", { "width": "12", "height": "12", "stroke-width": "6" } %}</p>
  <hr>
 {% endfor %}
 
