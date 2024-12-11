@@ -16,11 +16,12 @@ layout: layouts/base.njk
 
 {{ content | safe }}
 
-
+{#
 {% set mentions = webmentions.mentions | webmentionsByUrl(page.url) %}
 {% if  mentions.mentionCount > 0 %}
   {% include 'webmentions.njk' %}
 {% endif %}
+#}
 
 {%- if collections.posts %}
 {%- set previousPost = collections.posts | getPreviousCollectionItem %}
