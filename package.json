@@ -55,6 +55,7 @@
 		"dotenv": "^16.4.7",
 		"fs": "^0.0.1-security",
 		"markdown-it": "^14.1.0",
+		"markdown-it-emoji": "^3.0.0",
 		"markdown-it-footnote": "^4.0.0",
 		"markdown-it-github-alerts": "^0.3.0",
 		"node-fetch": "^3.3.2",

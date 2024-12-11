@@ -9,6 +9,7 @@ import markdownit from "markdown-it";
 import markdownItGitHubAlerts from 'markdown-it-github-alerts';
 import setLibrary from 'markdown-it-github-alerts';
 import markdownItFootnote from 'markdown-it-footnote';
+import { full as emoji } from 'markdown-it-emoji';
 import eleventyLucideicons from "@grimlink/eleventy-plugin-lucide-icons";
 import pluginFilters from "./_config/filters.js";
 import WebCPlugin from "@11ty/eleventy-plugin-webc";
@@ -22,7 +23,8 @@ let opt = {
 
 const md = markdownit(opt)
   .use(markdownItGitHubAlerts)
-  .use(markdownItFootnote);
+  .use(markdownItFootnote)
+  .use(emoji);
 
   md.renderer.rules.footnote_block_open = () => (
     '<section class="footnotes">\n' +
