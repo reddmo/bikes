@@ -48,12 +48,13 @@
   }
   
   .comment-content {
-    margin: 0;
+    margin-left: 0.5rem;
   }
   
   .comment-date {
     font-size: inherit;
     justify-self: left;
+    margin-left: 0.5rem;
     line-height: 1;
     color: var(--text-color-link-visited);
   }

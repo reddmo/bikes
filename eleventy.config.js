@@ -66,9 +66,7 @@ export default async function(eleventyConfig) {
   eleventyConfig.addPlugin(HtmlBasePlugin);
   eleventyConfig.addPlugin(InputPathToUrlTransformPlugin);
   eleventyConfig.addPlugin(eleventyLucideicons, {
-    "class": "custom-class",
-    "align-item": "center",
-    "margin-top": "2",
+    "class": "svg",
     "stroke": "currentColor"
   });
 

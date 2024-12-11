@@ -135,6 +135,13 @@ picture {
 	margin-right: auto;
 }
 
+.svg {
+	margin-top: 0;
+	margin-bottom: 0;
+	align-content: center;
+	display: inline;
+}
+
 p:last-child {
 	margin-bottom: 0;
 }
