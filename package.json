@@ -52,7 +52,6 @@
 		"@zachleat/heading-anchors": "^1.0.1",
 		"axios": "^1.7.7",
 		"date-fns": "^3.6.0",
-		"dayjs": "^1.11.13",
 		"dotenv": "^16.4.7",
 		"fs": "^0.0.1-security",
 		"markdown-it": "^14.1.0",
@@ -62,7 +61,6 @@
 		"node-fetch": "^3.3.2",
 		"normalize-url": "^8.0.1",
 		"path": "^0.12.7",
-		"rss-parser": "^3.13.0",
-		"sanitize-html": "^2.13.1"
+		"rss-parser": "^3.13.0"
 	}
 }
