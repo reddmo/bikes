@@ -7,6 +7,7 @@ import { eleventyImageTransformPlugin } from "@11ty/eleventy-img";
 import 'dotenv/config';
 import markdownit from "markdown-it";
 import markdownItGitHubAlerts from 'markdown-it-github-alerts';
+import markdownItAttrs from "markdown-it-attrs";
 import setLibrary from 'markdown-it-github-alerts';
 import markdownItFootnote from 'markdown-it-footnote';
 import { full as emoji } from 'markdown-it-emoji';
@@ -24,6 +25,7 @@ let opt = {
 const md = markdownit(opt)
   .use(markdownItGitHubAlerts)
   .use(markdownItFootnote)
+  .use(markdownItAttrs)
   .use(emoji);
 
   md.renderer.rules.footnote_block_open = () => (
