@@ -4,7 +4,9 @@ description: "My Pastelodon Theme for the Mastodon app Mona"
 date: 2023-03-02
 tags: ['pastelodon', 'mona', 'mastodon']
 ---
-![Screenshot of Pastelodon Theme for Mona](images/pastelodon.png)
+![Screenshot of Pastelodon Theme for Mona](images/pastelodon.png) 
+
+Screenshot of Pastelodon Theme for Mona {.caption}
 
 I didn't expect my second post to be a theme for a Mastodon app but after messing with the custom theme creator in [Mona](https://mastodon.social/@MonaApp), I was intrigued by the possibilities of it.
 
