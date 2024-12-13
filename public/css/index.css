@@ -42,12 +42,22 @@
 	--color-caution: light-dark(#d1242f,#f85149);
 	--color-important: light-dark(#8250df,#a371f7);
 
+	--background-color: light-dark(#fefefe,#090200);
+	--text-color: light-dark(#212829,#f2f6f7);
+	--text-color-link: light-dark(#e31c3d,#50d0ee);
+	--text-color-link-active: light-dark(#4e2e92,#f7ca18);
+	--text-color-link-visited: light-dark(#007b96,rgba(246,36,89));
+	--border-color: light-dark(#d81c23,#f4db7d);
+	--code-background-color: light-dark(#f2f2f2,#030404);
+	--code-color: light-dark(#222,#ddd);
+
+/*
 	--background-color: light-dark(#fefefe,#1a2238);
 	--text-color: light-dark(#212829,#f2f6f7);
 	--text-color-link: light-dark(#b30d0d,#ff6a3d);
 	--text-color-link-active: light-dark(#e06727,#f4db7d);
 	--text-color-link-visited: light-dark(#247e81,#9daaf2);
-	--border-color: light-dark(#d81c23,#f4db7d);
+	--border-color: light-dark(#d81c23,#f4db7d); */
 	--syntax-tab-size: 2;
 
 	--font-size-xs: clamp(1rem, calc(0.96rem + 0.22vw), 1.13rem);
@@ -295,8 +305,8 @@ pre:not([class*="language-"]) {
 }
 code {
 	word-break: break-all;
-	background-color: var(--color-gray-90);
-	color: var(--background-color);
+	background-color: var(--code-background-color);
+	color: var(--code-color);
 }
 
 /* Header */
