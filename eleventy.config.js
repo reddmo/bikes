@@ -15,7 +15,24 @@ import eleventyLucideicons from "@grimlink/eleventy-plugin-lucide-icons";
 import pluginFilters from "./_config/filters.js";
 import WebCPlugin from "@11ty/eleventy-plugin-webc";
 
-let opt = {
+
+
+/** @param {import("@11ty/eleventy").UserConfig} eleventyConfig */
+export default async function(eleventyConfig) {
+
+  // Copy the contents of the `public` folder to the output folder
+  eleventyConfig
+    .addPassthroughCopy({
+      "./public/": "/",
+      "./node_modules/prismjs/themes/prism-okaidia.css": "/css/prism-okaidia.css"
+    })
+    .addPassthroughCopy("./content/feed/pretty-atom-feed.xsl");
+
+  // Fonts
+  eleventyConfig.addPassthroughCopy("./content/assets/fonts");
+
+  // Mardown-It
+  let opt = {
   html: true,
   breaks: true,
   linkify: true,
@@ -33,20 +50,6 @@ const md = markdownit(opt)
     '<h4>Footnotes</h4>\n' +
     '<ol class="footnotes-list">\n' 
   );
-
-/** @param {import("@11ty/eleventy").UserConfig} eleventyConfig */
-export default async function(eleventyConfig) {
-
-  // Copy the contents of the `public` folder to the output folder
-  eleventyConfig
-    .addPassthroughCopy({
-      "./public/": "/",
-      "./node_modules/prismjs/themes/prism-okaidia.css": "/css/prism-okaidia.css"
-    })
-    .addPassthroughCopy("./content/feed/pretty-atom-feed.xsl");
-
-  // Fonts
-  eleventyConfig.addPassthroughCopy("./content/assets/fonts");
 
   // Watch content images for the image pipeline
   eleventyConfig.addWatchTarget("content/**/*.{svg,webp,png,jpeg}");
