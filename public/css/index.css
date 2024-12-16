@@ -122,7 +122,7 @@ h1 {
 }
 
 h2 {
-	font-size: var(--font-size-base);
+	font-size: var(--font-size-lg);
 }
 
 /* https://www.a11yproject.com/posts/how-to-hide-content/ */
@@ -405,16 +405,18 @@ header {
 }
 .postlist-date {
 	word-spacing: -0.5px;
+	padding-left: .25em;
 }
 .postlist-link {
-	font-size: 1.1875em; /* 19px /16 */
-	font-weight: 700;
+	font-size: var(--font-size-base); /* 19px /16 */
+/*	font-weight: 700; */
 	flex-basis: calc(100% - 1.5rem);
 	padding-left: .25em;
 	padding-right: .5em;
 	text-underline-position: from-font;
-	text-underline-offset: 0;
+	text-underline-offset: 0.18rem;
 	text-decoration-thickness: 1px;
+	text-wrap: pretty;
 }
 .postlist-item-active .postlist-link {
 	font-weight: bold;
