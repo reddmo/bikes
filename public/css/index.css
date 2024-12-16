@@ -96,7 +96,7 @@ body {
 	padding: 0;
 	margin: 0 auto;
 	font-family: "Departure";
-	color: var(--text-color);
+	color: var(--text-color); 
 	background-color: var(--background-color);
 	text-wrap: pretty;
 }
@@ -169,14 +169,14 @@ li {
 }
 
 a[href] {
-	color: var(--text-color);
+	color: var(--text-color); 
 	text-decoration-color: var(--text-color-link);
 	text-decoration-thickness: .175em;
 	text-decoration-style: solid;
 	text-underline-offset: .16rem;
 }
 a[href]:visited {
-	color: var(--text-color);
+	color: var(--text-color); 
 	text-decoration-color: var(--text-color-link-visited);
 	text-decoration-thickness: .175em;
 	text-decoration-style: solid;
@@ -343,20 +343,26 @@ header {
 	list-style: none;
 	overflow: wrap;
 }
+
 .nav-item {
 	display: inline-block;
 	margin-top: 0.5em;
 	margin-right: 1em;
+	padding: .25em;
+	border: 2px solid var(--text-color-link-visited);
+	border-radius: 4px;
+	color: var(--background-color) !important;
+	background-color: var(--text-color-link);
 }
 .nav-item a[href]:not(:hover) {
-	color: var(--text-color);
+	color: var(--background-color); 
 	text-decoration-color: var(--text-color-link);
 	text-decoration-thickness: .175em;
 	text-decoration-style: solid;
 	text-underline-offset: .16rem;
 }
 .nav a[href][aria-current="page"] {
-	color: var(--text-color);
+	color: var(--background-color); 
 	text-decoration-color: var(--text-color-link-active);
 	text-decoration-thickness: .175em;
 	text-decoration-style: solid;
