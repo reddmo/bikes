@@ -348,25 +348,33 @@ header {
 	display: inline-block;
 	margin-top: 0.5em;
 	margin-right: 1em;
-	padding: .25em;
+/*	padding: .25em;
 	border: 2px solid var(--text-color-link-visited);
 	border-radius: 4px;
 	color: var(--background-color) !important;
-	background-color: var(--text-color-link);
+	background-color: var(--text-color-link); */
 }
 .nav-item a[href]:not(:hover) {
-	color: var(--background-color); 
+	color: var(--text-color) !important; 
 	text-decoration-color: var(--text-color-link);
 	text-decoration-thickness: .175em;
 	text-decoration-style: solid;
-	text-underline-offset: .16rem;
+	text-underline-offset: .16rem; 
 }
-.nav a[href][aria-current="page"] {
-	color: var(--background-color); 
-	text-decoration-color: var(--text-color-link-active);
+/* .nav-item:hover {
+	color: var(--text-color) !important;
+	background-color: var(--text-color-link-active);
+	border: 2px solid var(--text-color-link);
+	border-radius: 4px;
+	padding: 0.25em;
+} */
+
+.nav-item a[href][aria-current="page"] {
+	color: var(--text-color-link-active) !important; 
+	text-decoration-color: var(--text-color-link-visited);
 	text-decoration-thickness: .175em;
 	text-decoration-style: solid;
-	text-underline-offset: .18rem;
+	text-underline-offset: .18rem; 
 }
 
 /* Posts list */
