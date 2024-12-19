@@ -21,13 +21,6 @@
 		{# favicon #}
 		<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🚴🏻</text></svg>">
 
-		{# snow #}
-		<script defer type="module" src="https://unpkg.com/@zachleat/snow-fall@1.0.3/snow-fall.js"></script>
-
-		<script type="module" defer>
-		const snow = document.createElement('snow-fall');
-		</script>
-
 		{#-
 		CSS bundles are provided via the `eleventy-plugin-bundle` plugin:
 		1. You can add to them using `{% css %}`
@@ -85,6 +78,7 @@
 		{#- Renders the CSS bundle using a separate file, if you can't set CSP directive style-src: 'unsafe-inline' #}
 		{#- <link rel="stylesheet" href="{% getBundleFileUrl "css" %}"> #}
 		{%- js %}{% include "node_modules/@zachleat/heading-anchors/heading-anchors.js" %}{% endjs %}
+		{%- js %}{% include "node_modules/@zachleat/snow-fall/snow-fall.js" %}{% endjs %}
 	</head>
 	<body>
 		<a href="#skip" class="visually-hidden">Skip to main content</a>
