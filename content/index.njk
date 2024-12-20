@@ -5,7 +5,7 @@ eleventyNavigation:
 numberOfLatestPostsToShow: 5
 ---
 <is-land on:media="(prefers-reduced-motion: no-preference)">
-<snow-fall style="--snow-fall-color: light-dark(var(--color-gray-20),var(--text-color-link))"></snow-fall>
+<snow-fall style="--snow-fall-color: var(--color-gray-20)"></snow-fall>
 </is-land>
 {% set postsCount = collections.posts | length %}
 {% set latestPostsCount = postsCount | min(numberOfLatestPostsToShow) %}
