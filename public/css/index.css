@@ -143,7 +143,7 @@ html,
 body {
 	padding: 0;
 	margin: 0 auto;
-	font-family: "B612";
+	font-family: 'B612';
 	color: var(--text-color); 
 	background-color: var(--background-color);
 	text-wrap: pretty;
@@ -330,7 +330,7 @@ table th {
 
 pre,
 code {
-	font-family: "var(--font-family-monospace)";
+	font-family: 'B612 Mono';
 }
 pre {
 	border: 3px solid var(--text-color-link);
