@@ -24,6 +24,54 @@
 	font-display: swap;
 }
 
+@font-face {
+	font-family: "B612";
+	font-weight: 400;
+	font-style: normal;
+	src: url("/assets/fonts/B612-Regular.ttf") format("ttf");
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "B612";
+	font-weight: 400;
+	font-style: italic;
+	src: url("/assets/fonts/B612-Italic.ttf") format("ttf");
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "B612";
+	font-weight: 700;
+	font-style: bold;
+	src: url("/assets/fonts/B612-Bold.ttf") format("ttf");
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "B612 Mono";
+	font-weight: 400;
+	font-style: normal;
+	src: url("/assets/fonts/B612Mono-Regular.ttf") format("ttf");
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "B612 Mono";
+	font-weight: 400;
+	font-style: italic;
+	src: url("/assets/fonts/B612Mono-Italic.ttf") format("ttf");
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "B612 Mono";
+	font-weight: 700;
+	font-style: bold;
+	src: url("/assets/fonts/B612Mono-Bold.ttf") format("ttf");
+	font-display: swap;
+}
+
 :root {
 	--font-family: -apple-system, system-ui, sans-serif;
 	--font-family-monospace: Consolas, Menlo, Monaco, Andale Mono WT, Andale Mono, Lucida Console, Lucida Sans Typewriter, DejaVu Sans Mono, Bitstream Vera Sans Mono, Liberation Mono, Nimbus Mono L, Courier New, Courier, monospace;
@@ -95,7 +143,7 @@ html,
 body {
 	padding: 0;
 	margin: 0 auto;
-	font-family: "Departure";
+	font-family: "B612";
 	color: var(--text-color); 
 	background-color: var(--background-color);
 	text-wrap: pretty;
@@ -207,7 +255,7 @@ button {
 	font-size: var(--font-size-base);
 	place-items: center;
 	font-size: inherit;
-	font-family: 'Departure';
+	font-family: 'B612 Mono';
 	line-height: 1.15em;
 	cursor: pointer;
 }
@@ -282,7 +330,7 @@ table th {
 
 pre,
 code {
-	font-family: var(--font-family-monospace);
+	font-family: "var(--font-family-monospace)";
 }
 pre {
 	border: 3px solid var(--text-color-link);
