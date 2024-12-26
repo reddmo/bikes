@@ -29,7 +29,7 @@ export default async function(eleventyConfig) {
     .addPassthroughCopy("./content/feed/pretty-atom-feed.xsl");
 
   // Fonts
-  eleventyConfig.addPassthroughCopy("./content/assets/fonts/");
+  eleventyConfig.addPassthroughCopy("./content/assets/fonts/*.{woff,woff2,ttf}");
 
   // Mardown-It
   let opt = {
