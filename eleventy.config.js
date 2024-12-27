@@ -15,8 +15,6 @@ import eleventyLucideicons from "@grimlink/eleventy-plugin-lucide-icons";
 import pluginFilters from "./_config/filters.js";
 import WebCPlugin from "@11ty/eleventy-plugin-webc";
 
-
-
 /** @param {import("@11ty/eleventy").UserConfig} eleventyConfig */
 export default async function(eleventyConfig) {
 
