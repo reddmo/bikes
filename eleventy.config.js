@@ -14,7 +14,7 @@ import { full as emoji } from 'markdown-it-emoji';
 import eleventyLucideicons from "@grimlink/eleventy-plugin-lucide-icons";
 import pluginFilters from "./_config/filters.js";
 import WebCPlugin from "@11ty/eleventy-plugin-webc";
-import pluginRss from "@11ty/eleventy-plugin-rss";
+import eleventyAutoCacheBuster from "eleventy-auto-cache-buster";
 
 /** @param {import("@11ty/eleventy").UserConfig} eleventyConfig */
 export default async function(eleventyConfig) {
@@ -65,7 +65,7 @@ const md = markdownit(opt)
     preAttributes: { tabindex: 0 }
   });
   eleventyConfig.addPlugin(pluginNavigation);
-  eleventyConfig.addPlugin(pluginRss);
+  eleventyConfig.addPlugin(eleventyAutoCacheBuster);
   eleventyConfig.addPlugin(HtmlBasePlugin);
   eleventyConfig.addPlugin(InputPathToUrlTransformPlugin);
   eleventyConfig.addPlugin(eleventyLucideicons, {
