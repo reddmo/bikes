@@ -14,6 +14,7 @@ import { full as emoji } from 'markdown-it-emoji';
 import eleventyLucideicons from "@grimlink/eleventy-plugin-lucide-icons";
 import pluginFilters from "./_config/filters.js";
 import WebCPlugin from "@11ty/eleventy-plugin-webc";
+import pluginRss from "@11ty/eleventy-plugin-rss";
 
 /** @param {import("@11ty/eleventy").UserConfig} eleventyConfig */
 export default async function(eleventyConfig) {
@@ -64,6 +65,7 @@ const md = markdownit(opt)
     preAttributes: { tabindex: 0 }
   });
   eleventyConfig.addPlugin(pluginNavigation);
+  eleventyConfig.addPlugin(pluginRss);
   eleventyConfig.addPlugin(HtmlBasePlugin);
   eleventyConfig.addPlugin(InputPathToUrlTransformPlugin);
   eleventyConfig.addPlugin(eleventyLucideicons, {
@@ -92,6 +94,25 @@ const md = markdownit(opt)
     },
     collection: {
       name: "posts",
+      limit: 10,
+    },
+    metadata: {
+      language: "en",
+      title: "stuff&things",
+      subtitle: "Just some stuff about things.",
+      base: "https://stuffandthings.lol/",
+      author: {
+        name: "Jason"
+      }
+    }
+  });
+
+  eleventyConfig.addPlugin(feedPlugin, {
+    type: "rss",
+    outputPath: "/feed/notesfeed.xml",
+    stylesheet: "pretty-atom-feed.xsl",
+    collection: {
+      name: "notes",
       limit: 10,
     },
     metadata: {

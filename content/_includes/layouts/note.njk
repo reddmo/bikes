@@ -1,0 +1,28 @@
+---
+layout: layouts/base.njk
+---
+{# Only include the syntax highlighter CSS on blog posts #}
+{%- css %}{% include "node_modules/prismjs/themes/prism-okaidia.css" %}{% endcss %}
+{%- css %}{% include "public/css/prism-diff.css" %}{%- endcss %}
+<h1>{{ title }}</h1>
+
+<ul class="post-metadata">
+	<li><time datetime="{{ page.date | htmlDateString }}" style="color: var(--text-color-link)">{{ page.date | readableDate }}</time></li>
+	{%- for tag in tags | filterTagList %}
+	{%- set tagUrl %}/tags/{{ tag | slugify }}/{% endset %}
+	<li><a href="{{ tagUrl }}" class="post-tag" aria-label="{{ tag }}">{{ tag }}</a>{%- if not loop.last %}, {% endif %}</li>
+	{%- endfor %}
+</ul>
+
+{{ content | safe }}
+
+{%- if collections.notes %}
+{%- set previousNote = collections.notes | getPreviousCollectionItem %}
+{%- set nextNote = collections.notes | getNextCollectionItem %}
+{%- if nextNote or previousNote %}
+<ul class="links-nextprev">
+	{%- if previousNote %}<li class="links-nextprev-prev"><em>← Previous</em><br> <a href="{{ previousNote.url }}" aria-label="{{ previousNote.data.title }}">{{ previousNote.data.title }}</a></li>{% endif %}
+	{%- if nextNote %}<li class="links-nextprev-next"><em>Next →</em><br><a href="{{ nextNote.url }}" aria-label="{{ nextNote.data.title }}">{{ nextNote.data.title }}</a></li>{% endif %}
+</ul>
+{%- endif %}
+{%- endif %}
