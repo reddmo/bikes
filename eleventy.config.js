@@ -29,6 +29,8 @@ export default async function(eleventyConfig) {
 
   // Fonts
   eleventyConfig.addPassthroughCopy("./content/assets/fonts/*.{woff,woff2,ttf}");
+  
+  eleventyConfig.addPassthroughCopy("admin");
 
   // Mardown-It
   let opt = {
