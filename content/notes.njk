@@ -13,9 +13,12 @@ pagination:
 {% for post in noteposts %}
 
     <h2>{{ post.data.title }}</h2>
-		<p><time class="postlist-date" datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate("dd LLLL yyyy") }}</time></p>
+        <ul class="post-metadata">
+            <li><time datetime="{{ page.date | htmlDateString }}" style="color: var(--text-color-link)">{{ page.date | readableDate }}</time></li>
+        </ul>
 
     {{ post.content | safe }}
+    <p><a href="{{ post.url }}" class="button">Read more</a> {% lucide "move-right", { "width": "12", "height": "12", "stroke-width": "6" } %}</p>
  <hr>
 {% endfor %}
 
