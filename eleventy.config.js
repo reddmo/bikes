@@ -13,8 +13,9 @@ import markdownItFootnote from 'markdown-it-footnote';
 import { full as emoji } from 'markdown-it-emoji';
 import eleventyLucideicons from "@grimlink/eleventy-plugin-lucide-icons";
 import pluginFilters from "./_config/filters.js";
-import WebCPlugin from "@11ty/eleventy-plugin-webc";
+import EleventyPluginOgImage from 'eleventy-plugin-og-image';
 import eleventyAutoCacheBuster from "eleventy-auto-cache-buster";
+import fs from 'fs';
 
 /** @param {import("@11ty/eleventy").UserConfig} eleventyConfig */
 export default async function(eleventyConfig) {
@@ -75,13 +76,20 @@ const md = markdownit(opt)
     "stroke": "currentColor"
   });
 
-  // Enable the WebC plugin to handle .webc files
-  eleventyConfig.addPlugin(WebCPlugin, {
-    // Options for WebC can be added here if needed, for example:
-    components: "./content/_includes/components/**/*.webc"
-  });
-
 	eleventyConfig.addPlugin(EleventyRenderPlugin);
+
+  eleventyConfig.addPlugin(EleventyPluginOgImage, {
+    satoriOptions: {
+      fonts: [
+        {
+          name: 'B612 Bold',
+          data: fs.readFileSync('./content/assets/fonts/B612-Bold.ttf'),
+          weight: 700,
+          style: 'normal',
+        },
+      ],
+    },
+  });
 
   // Atom Feed Plugin
   eleventyConfig.addPlugin(feedPlugin, {
