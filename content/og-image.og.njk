@@ -5,7 +5,7 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      background: linear-gradient(135deg, #e31c3d,#50d0ee);
+      background: linear-gradient(135deg, #e31c3d, #007b96);
     }
   
     .title {
@@ -13,9 +13,30 @@
       font-size: 80px;
       margin: auto 10px;
     }
+  
+    .card {
+      display: flex;
+      justify-content: center;
+      margin: 0 160px;
+      border-radius: 10px 10px 0 0;
+      padding: 20px 56px;
+      background-color: #f2f2f2;
+      box-shadow:
+        0 0 4px rgba(0, 0, 0, 0.024),
+        0 0 10px rgba(0, 0, 0, 0.035),
+        0 0 24px rgba(0, 0, 0, 0.046),
+        0 0 80px rgba(0, 0, 0, 0.07);
+    }
+  
+    .sub-title {
+      color: #212829;
+      font-size: 44px;
+    }
   </style>
   
   <div class="root">
     <h1 class="title">{{ title }}</h1>
-    <h2 style="font-size: 44px; color: #fefefe">{{ description }}</h2>
+    <div class="card">
+      <h2 class="sub-title">{{ description }}</h2>
+    </div>
   </div>
