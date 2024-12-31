@@ -6,7 +6,9 @@
 		<title>{{ title or metadata.title }}</title>
 		<meta name="description" content="{{ description or metadata.description }}">
 		
+		{# for post in collections.posts #}
 		{# ogImage "./og-image.og.njk", { title: title, description: description } #}
+		{# endfor #}
 		
 
 		{#- Atom and JSON feeds included by default #}

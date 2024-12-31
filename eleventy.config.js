@@ -82,7 +82,7 @@ const md = markdownit(opt)
     satoriOptions: {
       fonts: [
         {
-          name: 'B612 Bold',
+          name: 'B612',
           data: fs.readFileSync('./content/assets/fonts/B612-Bold.ttf'),
           weight: 700,
           style: 'normal',
