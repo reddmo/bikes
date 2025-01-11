@@ -10,7 +10,7 @@ public_folder: /img
 collections:
   - name: 'notes'
     label: 'Notes'
-    folder: 'content/notes/2024'
+    folder: 'content/notes/2025'
     create: true
     slug: '{{slug}}'
     editor:
