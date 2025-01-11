@@ -39,6 +39,4 @@ collections:
       - label: "Tags"
         name: "tags" 
         widget: "list" 
-        min: 1
-        max: 99
       - { label: 'Body', name: 'body', widget: 'markdown' }
