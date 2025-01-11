@@ -77,7 +77,6 @@ const md = markdownit(opt)
   });
 
 	eleventyConfig.addPlugin(EleventyRenderPlugin);
-
   eleventyConfig.addPlugin(EleventyPluginOgImage, {
     satoriOptions: {
       fonts: [
