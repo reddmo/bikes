@@ -13,4 +13,4 @@ I play several musical instruments and even a few of them well. I like to get ve
 
 I am politically involved and progressive.
 
-<center><img eleventy:widths="300" src="/assets/images/self.png" alt="It's me, a picture of the creator of this site sitting in a chair with on his MacBook Air looking confused."></center>
+<center><img eleventy:widths="450" src="/assets/images/self.png" alt="It's me, a picture of the creator of this site sitting in a chair with on his MacBook Air looking confused."></center>
