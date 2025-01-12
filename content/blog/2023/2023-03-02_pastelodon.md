@@ -3,8 +3,8 @@ title: 'Pastelodon Theme for Mona '
 description: "My Pastelodon Theme for the Mastodon app Mona"
 date: 2023-03-02
 tags: ['pastelodon', 'mona', 'mastodon']
----
-![Screenshot of Pastelodon Theme for Mona](/assets/images/pastelodon.png) 
+--- 
+<img src="/assets/images/pastelodon.png" alt="Screenshot of Pastelodon Theme for Mona">
 
 Screenshot of Pastelodon Theme for Mona {.caption}
 

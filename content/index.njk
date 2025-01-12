@@ -6,7 +6,7 @@ numberOfLatestPostsToShow: 5
 ---
 {% set postsCount = collections.posts | length %}
 {% set latestPostsCount = postsCount | min(numberOfLatestPostsToShow) %}
-<h1>Latest {{ latestPostsCount }} Post{% if latestPostsCount != 1 %}s{% endif %}</h1>
+<h1>The Most Recent {{ latestPostsCount }} Post{% if latestPostsCount != 1 %}s{% endif %}</h1>
 
 {% set postslist = collections.posts | head(-1 * numberOfLatestPostsToShow) %}
 {% set postslistCounter = postsCount %}
@@ -14,7 +14,7 @@ numberOfLatestPostsToShow: 5
 
 {% set morePosts = postsCount - numberOfLatestPostsToShow %}
 {% if morePosts > 0 %}
-<p>{{ morePosts }} more post{% if morePosts != 1 %}s{% endif %} can be found in <a href="blog.njk">the archive</a>.</p>
+<p>{{ morePosts }} more post{% if morePosts != 1 %}s{% endif %} can be found in <a href="blog.njk"> the blog</a> or check out the <a href="notes.njk"> notes</a> that hit my <a href="https://social.lol/@jasonm"> social.lol feed</a>.</p>
 {% endif %}
 
 {# <p><script src="https://status.lol/jasonm.js?time&link&fluent"></script></p> #}
@@ -22,8 +22,8 @@ numberOfLatestPostsToShow: 5
 {# List every content page in the project #}
 {#
 <ul>
-	{%- for entry in collections.all %}
-	<li><a href="{{ entry.url }}"><code>{{ entry.url }}</code></a></li>
-	{%- endfor %}
+	{% for entry in collections.notes %}
+	<li><a href="{{ entry.url }}">{{ entry.url }}</a></li>
+	{% endfor %}
 </ul>
 #}

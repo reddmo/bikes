@@ -13,7 +13,7 @@ I went on my longest one-way ride yesterday to date with this bike. I've ridden 
 
 Overall, would do again.
 
-![Image from Apple Fitness of my longest one way ride so far](/assets/images/TenMiles.png)
+<img src="/assets/images/TenMiles.png" alt="Image from Apple Fitness of my longest one way ride so far.">
 
 ```json
 SUNDAY 13 OCTOBER
