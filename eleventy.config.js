@@ -78,6 +78,7 @@ const md = markdownit(opt)
 
 	eleventyConfig.addPlugin(EleventyRenderPlugin);
   eleventyConfig.addPlugin(EleventyPluginOgImage, {
+    outputDir: 'img/ogi',
     satoriOptions: {
       fonts: [
         {
