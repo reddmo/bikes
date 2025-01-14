@@ -1,6 +1,6 @@
 ---
 title: Removed Link
-date: 2025-01-11T13:41:22.060Z
+date: 2025-01-11
 description: "Dropping the link in my EchoFeed for notes "
 tags:
   - Notes

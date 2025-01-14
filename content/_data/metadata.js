@@ -1,5 +1,5 @@
 export default {
-	title: "stuff and things",
+	title: "stuff&things",
 	url: "https://stuffandthings.lol",
 	language: "en",
 	description: "Just some stuff about things.",

@@ -14,7 +14,7 @@ pagination:
 
     <h2>{{ post.data.title }}</h2>
         <ul class="post-metadata">
-            <li><time datetime="{{ page.date | htmlDateString }}" style="color: var(--text-color-link)">{{ page.date | readableDate }}</time></li>
+            <li><time datetime="{{ post.date | htmlDateString }}" style="color: var(--text-color-link)">{{ post.date | readableDate }}</time></li>
         </ul>
 
     {{ post.content | safe }}

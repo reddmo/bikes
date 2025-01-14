@@ -1,6 +1,6 @@
 ---
 title: Added a CMS
-date: 2024-12-28T05:01:50.283Z
+date: 2024-12-28
 description: Posting from a CMS
 tags:
  - Notes

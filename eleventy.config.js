@@ -29,7 +29,7 @@ export default async function(eleventyConfig) {
     .addPassthroughCopy("./content/feed/pretty-atom-feed.xsl");
 
   // Fonts
-  eleventyConfig.addPassthroughCopy("./content/assets/fonts/*.{woff,woff2,ttf}");
+  eleventyConfig.addPassthroughCopy("content/assets/fonts/*.{woff,woff2,ttf}");
   
   eleventyConfig.addPassthroughCopy("admin");
 
@@ -159,6 +159,14 @@ const md = markdownit(opt)
 
   // Lucide icons shortcode
   eleventyConfig.addShortcode("lucide", function(eleventyLucideicons) { /* … */ });
+
+  eleventyConfig.addCollection("posts", function (collections) {
+		return collections.getFilteredByGlob("content/blog/**/*.md");
+	});
+
+  eleventyConfig.addCollection("notes", function (collections) {
+		return collections.getFilteredByGlob("content/notes/**/*.md");
+	});
 }
 
 export const config = {

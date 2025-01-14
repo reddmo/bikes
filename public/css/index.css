@@ -323,7 +323,7 @@ header {
 	font-family: var(--font-family);
 	font-size: 2em; /* 16px /16 */
 	font-weight: 900;
-	margin-right: 2em;
+	margin-right: 7em;
 }
 .home-link:link:not(:hover) {
 	text-decoration: none;
@@ -348,13 +348,9 @@ header {
 .nav-item {
 	display: inline-block;
 	margin-top: 0.5em;
-	margin-right: 1em;
-/*	padding: .25em;
-	border: 2px solid var(--text-color-link-visited);
-	border-radius: 4px;
-	color: var(--background-color) !important;
-	background-color: var(--text-color-link); */
+	margin-left: 1rem;
 }
+
 .nav-item a[href]:not(:hover) {
 	color: var(--text-color) !important; 
 	text-decoration-color: var(--text-color-link);
@@ -362,13 +358,6 @@ header {
 	text-decoration-style: solid;
 	text-underline-offset: .16rem; 
 }
-/* .nav-item:hover {
-	color: var(--text-color) !important;
-	background-color: var(--text-color-link-active);
-	border: 2px solid var(--text-color-link);
-	border-radius: 4px;
-	padding: 0.25em;
-} */
 
 .nav-item a[href][aria-current="page"] {
 	color: var(--text-color-link-active) !important; 
