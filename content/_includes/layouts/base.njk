@@ -6,11 +6,11 @@
 		<title>{{ title or metadata.title }}</title>
 		<meta name="description" content="{{ description or metadata.description }}">
 		
-		
+		{#
 		{% for post in collections.posts %}
 		{% ogImage "./og-image.og.njk", { title: title | safe } %}
 		{% endfor %}
-		
+		#}
 {#
 		{% if env.production %}
    		 <meta property="og:image" content="https://stuffandthings.lol/img/ogi/{{ page.url | slugify }}.png">
@@ -21,12 +21,12 @@
 		{#- Atom and JSON feeds included by default #}
 		<link rel="alternate" href="feed/feed.xml" type="application/atom+xml" title="{{ metadata.title }}">
 		<link rel="alternate" href="feed/json.njk" type="application/json" title="{{ metadata.title }}">
-		{# <meta property="og:title" content="{{ metadata.title }}">
+		<meta property="og:title" content="{{ metadata.title }}">
 		<meta property="og:type" content="website">
 		<meta name="description" content="Just some stuff about things.">
 		<meta property="og:description" content="{{ description or metadata.description }}">
 		<meta property="og:image" content="https://stuffandthings.lol/img/stuff2.png">
-		<meta property="og:url" content="{{ metadata.url }}{{ page.url }}"> #}
+		<meta property="og:url" content="{{ metadata.url }}{{ page.url }}">
 
 		{#- Uncomment this if you’d like folks to know that you used Eleventy to build your site!  #}
 		<meta name="generator" content="{{ eleventy.generator }}">
