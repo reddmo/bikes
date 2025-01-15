@@ -78,6 +78,7 @@ const md = markdownit(opt)
 
 	eleventyConfig.addPlugin(EleventyRenderPlugin);
   eleventyConfig.addPlugin(EleventyPluginOgImage, {
+    urlPath: 'https://stuffandthings.lol',
     satoriOptions: {
       fonts: [
         {
