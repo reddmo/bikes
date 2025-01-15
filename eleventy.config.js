@@ -78,7 +78,7 @@ const md = markdownit(opt)
 
 	eleventyConfig.addPlugin(EleventyRenderPlugin);
   eleventyConfig.addPlugin(EleventyPluginOgImage, {
-    urlPath: 'https://stuffandthings.lol',
+    shortcodeOutput: async (ogImage) => `<meta property="og:image" content="https://stuffandthings.lol${await ogImage.outputUrl()}" />`,
     satoriOptions: {
       fonts: [
         {
