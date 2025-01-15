@@ -6,15 +6,15 @@
 		<title>{{ title or metadata.title }}</title>
 		<meta name="description" content="{{ description or metadata.description }}">
 		
-		
-		{% ogImage "./og-image.og.njk", { title: title | safe } %}
 		{#
+		{% ogImage "./og-image.og.njk", { title: title | safe } %}
+		#}
 		{% if env.production %}
-   		 <meta property="og:image" content="https://stuffandthings.lol/img/ogi/{{ page.url | slugify }}.png">
+   		 <meta property="og:image" content="https://stuffandthings.lol/assets/ogi/preview/{{ page.url | slugify }}.png">
 		{% else %}
     	{% ogImage "./og-image.og.njk", { title: title | safe } %}
 		{% endif %}
-		#}		
+			
 		{#- Atom and JSON feeds included by default #}
 		<link rel="alternate" href="feed/feed.xml" type="application/atom+xml" title="{{ metadata.title }}">
 		<link rel="alternate" href="feed/json.njk" type="application/json" title="{{ metadata.title }}">
@@ -22,7 +22,7 @@
 		<meta property="og:type" content="website">
 		<meta name="description" content="Just some stuff about things.">
 		<meta property="og:description" content="{{ description or metadata.description }}">
-		{# <meta property="og:image" content="{{ metadata.url }}og-images/preview{{ page.url }}.png"> #}
+		{# <meta property="og:image" content="https://stuffandthings.lol/img/stuff2.png"> #}
 		<meta property="og:url" content="{{ metadata.url }}og-images/preview{{ page.url }}">
 
 		{#- Uncomment this if you’d like folks to know that you used Eleventy to build your site!  #}

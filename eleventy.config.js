@@ -55,6 +55,7 @@ const md = markdownit(opt)
 
   // Watch content images for the image pipeline
   eleventyConfig.addWatchTarget("content/**/*.{svg,webp,png,jpeg}");
+  eleventyConfig.watchIgnores.add('content/assets/ogi/**/*')
 
   // Per-page bundles (e.g. {% css %} and {% js %} shortcodes)
   eleventyConfig.addBundle("css");
@@ -78,7 +79,7 @@ const md = markdownit(opt)
 
 	eleventyConfig.addPlugin(EleventyRenderPlugin);
   eleventyConfig.addPlugin(EleventyPluginOgImage, {
-    outputUrl: 'https://stuffandthings.lol/og-images/preview/{{ page.url }}',
+    outputDir: 'assets/ogi',
     satoriOptions: {
       fonts: [
         {
