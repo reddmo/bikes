@@ -55,7 +55,6 @@ const md = markdownit(opt)
 
   // Watch content images for the image pipeline
   eleventyConfig.addWatchTarget("content/**/*.{svg,webp,png,jpeg}");
-  eleventyConfig.watchIgnores.add('public/img/ogi/**/*');
 
   // Per-page bundles (e.g. {% css %} and {% js %} shortcodes)
   eleventyConfig.addBundle("css");
@@ -90,7 +89,7 @@ const md = markdownit(opt)
       ],
     },
   });
-  
+
   // Atom Feed Plugin
   eleventyConfig.addPlugin(feedPlugin, {
     type: "atom",
