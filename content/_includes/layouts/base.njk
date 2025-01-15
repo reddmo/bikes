@@ -6,7 +6,6 @@
 		<title>{{ title or metadata.title }}</title>
 		<meta name="description" content="{{ description or metadata.description }}">
 		
-		
 		{% ogImage "./og-image.og.njk", { title: title | safe } %}
 					
 		{#- Atom and JSON feeds included by default #}
