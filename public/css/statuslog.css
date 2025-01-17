@@ -1,0 +1,30 @@
+/* Statuslog */
+.statuslol {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0;
+	margin: 15px;
+	padding: 20px 30px;
+	font-family: 'Inclusive Sans';
+	font-size: var(--font-size-xs);
+	color: var(--text-color);
+	background: var(--background-color);
+	border: 3px solid var(--text-color-link);
+	border-radius: 10px;
+  }
+  .statuslol_emoji_container {
+	min-width: 54px;
+	flex: 0;
+	font-size: var(--font-size-base);
+  }
+  .statuslol_content {
+	flex-grow: 1;
+	flex-shrink: 1;
+	flex-basis: 0;
+	margin: -12px 0 0;
+	text-align: left;
+	overflow-wrap: break-word;
+  }
+  .statuslol_time {
+	font-size: .9em;
+  }

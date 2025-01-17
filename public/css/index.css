@@ -166,7 +166,7 @@ p.caption {
 }
 
 li {
-	line-height: 1.5;
+	line-height: 2.0;
 }
 
 a[href] {
@@ -264,7 +264,7 @@ header:after {
 	padding: 1em 0;
 }
 .links-nextprev {
-	border-top: 2px dashed var(--text-color-link-active);
+	border-top: 2px dashed var(--border-color);
 }
 .links-nextprev > * {
 	flex-grow: 1;
@@ -312,18 +312,18 @@ code {
 
 /* Header */
 header {
-	display: flex;
+	display: block;
 	gap: 1em .5em;
-	flex-wrap: wrap;
+	/* flex-wrap: wrap; */
 	align-items: center;
 	padding: 1em;
 }
 .home-link {
 	color: var(--text-color-link-visited) !important;
 	font-family: var(--font-family);
-	font-size: 2em; /* 16px /16 */
+	font-size: 3em; /* 16px /16 */
 	font-weight: 900;
-	margin-right: 7em;
+	margin-right: 0;
 }
 .home-link:link:not(:hover) {
 	text-decoration: none;
@@ -347,8 +347,7 @@ header {
 
 .nav-item {
 	display: inline-block;
-	margin-top: 0.5em;
-	margin-left: 1rem;
+	margin: 0.5em;
 }
 
 .nav-item a[href]:not(:hover) {
@@ -422,6 +421,7 @@ header {
 	text-decoration-style: solid;
 	text-underline-offset: .16rem;
 }
+
 .postlist-item > .post-tag {
 	align-self: center;
 }
@@ -451,35 +451,3 @@ header {
 	gap: 1.5rem;
 	padding-left: 0;
 }
-
-/* Statuslog */
-.statuslol {
-	display: flex;
-	flex-wrap: wrap;
-	gap: 0;
-	margin: 30px;
-	padding: 20px;
-	font-family: 'Inclusive Sans';
-	font-size: var(--font-size-xs);
-	color: var(--text-color);
-	background: var(--background-color);
-	border: 3px solid var(--text-color-link);
-	border-radius: 10px;
-  }
-  .statuslol_emoji_container {
-	min-width: 54px;
-	flex: 0;
-	font-size: var(--font-size-base);
-  }
-  .statuslol_content {
-	flex-grow: 1;
-	flex-shrink: 1;
-	flex-basis: 0;
-	margin: -12px 0 0;
-	text-align: left;
-	overflow-wrap: break-word;
-  }
-  .statuslol_time {
-	font-size: .9em;
-	font-weight: bold;
-  }
