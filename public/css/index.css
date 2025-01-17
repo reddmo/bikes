@@ -313,7 +313,6 @@ code {
 /* Header */
 header {
 	display: block;
-	gap: 1em .5em;
 	/* flex-wrap: wrap; */
 	align-items: center;
 	padding: 1em;
