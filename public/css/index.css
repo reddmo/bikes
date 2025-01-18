@@ -347,7 +347,7 @@ header {
 
 .nav-item {
 	display: inline-block;
-	margin: 0.5em;
+	margin: 8px;
 }
 
 .nav-item a[href]:not(:hover) {
