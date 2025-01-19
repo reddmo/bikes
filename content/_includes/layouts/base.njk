@@ -7,23 +7,30 @@
 		<meta name="description" content="{{ description or metadata.description }}">
 		
 		{% ogImage "./og-image.og.njk", { title: title | safe } %}
-					
-		{#- Atom and JSON feeds included by default #}
-		<link rel="alternate" href="feed/feed.xml" type="application/atom+xml" title="{{ metadata.title }}">
-		<link rel="alternate" href="feed/json.njk" type="application/json" title="{{ metadata.title }}">
+
 		<meta property="og:title" content="{{ metadata.title }}">
 		<meta property="og:type" content="website">
 		<meta name="description" content="Just some stuff about things.">
 		<meta property="og:description" content="{{ description or metadata.description }}">
 		<meta property="og:url" content="{{ metadata.url }}{{ page.url }}">
-
-		{#- Uncomment this if you’d like folks to know that you used Eleventy to build your site!  #}
 		<meta name="generator" content="{{ eleventy.generator }}">
 		<meta name="fediverse:creator" content="@jasonm@social.lol">
+					
+		{#- Atom and JSON feeds included by default #}
+		<link rel="alternate" href="feed/feed.xml" type="application/atom+xml" title="{{ metadata.title }}">
+		<link rel="alternate" href="feed/json.njk" type="application/json" title="{{ metadata.title }}">
 
 		{# Webmentions #}
 		<link rel="webmention" href="https://webmention.io/stuffandthings.lol/webmention" />
 		<link rel="pingback" href="https://webmention.io/stuffandthings.lol/xmlrpc">
+
+		<span class="p-author h-card" style="display: none">
+            <img class="u-photo" src="/assets/icons/favicon.png" alt="stuff&things logo">
+            <img class="u-logo" src="/assets/icons/favicon.png" alt="stuff&things logo">
+            <a class="p-name" href="{{ metadata.url }}" rel="author">Jason Moser</a>
+            <span class="p-note">{{ metadata.description }}</span>
+            <a rel="me" class="u-url u-uid" href="{{ metadata.url }}{{ page.url }}">Permalink</a>
+        </span>
 
 		{# favicon #}
 		<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🚴🏻</text></svg>">
@@ -53,33 +60,33 @@
 		as="font"
 		type="font/woff2"
 		crossorigin="anonymous"
-	  />
+	  	/>
 	  
-	  <link
+	  	<link
 		rel="preload"
 		href="/assets/fonts/inclusive-sans-latin-400-italic.woff2"
 		as="font"
 		type="font/woff2"
 		crossorigin="anonymous"
-	  />
+	  	/>
 
-	  <link
-	  rel="preload"
-	  href="/assets/fonts/DepartureMono-Regular.woff2"
-	  as="font"
-	  type="font/woff2"
-	  crossorigin="anonymous"
-	  />
+	  	<link
+	  	rel="preload"
+	  	href="/assets/fonts/DepartureMono-Regular.woff2"
+	 	as="font"
+	 	type="font/woff2"
+	  	crossorigin="anonymous"
+	  	/>
 
 	  <!-- preloads in page data -->
-	  {%- if preloads -%}
+	  	{%- if preloads -%}
 		<!-- prettier-ignore -->
 		<link rel="preload"
-				  href="{{ preloads.href }}"
-				  as="{{ preloads.as }}"
-				  {% if preloads.type %}type={{ preloads.type }}{% endif %}{% if preloads.imagesrcset %}imagesrcset="{{ preloads.imagesrcset }}"{% endif %}
-				  {% if preloads.crossorigin %}crossorigin{% endif %} />
-	  {% endif %}
+			href="{{ preloads.href }}"
+			as="{{ preloads.as }}"
+			{% if preloads.type %}type={{ preloads.type }}{% endif %}{% if preloads.imagesrcset %}imagesrcset="{{ preloads.imagesrcset }}"{% endif %}
+			{% if preloads.crossorigin %}crossorigin{% endif %} />
+	  	{% endif %}
 
 
 		<link rel="stylesheet" href="{% getBundleFileUrl "css" %}">
@@ -87,6 +94,7 @@
 		{%- js %}{% include "node_modules/@zachleat/snow-fall/snow-fall.js" %}{% endjs %}
 		{%- js %}{% include "node_modules/@11ty/is-land/is-land.js" %}{% endjs %}
 	</head>
+
 	<body>
 		<a href="#skip" class="visually-hidden">Skip to main content</a>
 
