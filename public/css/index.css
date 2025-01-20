@@ -117,7 +117,7 @@ h6 {
 }
 
 h1 {
-	color: var(--border-color);
+	color: var(--text-color-link-active);
 	font-size: var(--font-size-xl);
 }
 
