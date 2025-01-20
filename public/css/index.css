@@ -244,7 +244,7 @@ main :first-child {
   }
 
 header {
-	border-bottom: 2px dashed var(--border-color);
+	border-bottom: 2px dashed var(--text-color-link);
 }
 header:after {
 	content: "";
@@ -264,7 +264,7 @@ header:after {
 	padding: 1em 0;
 }
 .links-nextprev {
-	border-top: 2px dashed var(--border-color);
+	border-top: 2px dashed var(--text-color-link);
 }
 .links-nextprev > * {
 	flex-grow: 1;
