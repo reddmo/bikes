@@ -2,21 +2,27 @@
 eleventyNavigation:
   key: Blog
   order: 2
-pagination:
-  data: collections.posts
-  size: 6
-  alias: blogposts
-  reverse: true
 ---
 <h1>Posts</h1>
 
-{% for post in blogposts %}
+{% set postslist = collections.posts %}
+{% include "postslist.njk" %}
+
+{#
+
+pagination:
+  data: collections.posts
+  size: 6
+  alias: postslist
+  reverse: true
+
+{% for post in postslist %}
 
     <h2>{{ post.data.title }}</h2>
 		<p><time class="postlist-date" datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate("dd LLLL yyyy") }}</time></p>
     <p>{{ post.data.description }}</p>
 
-    <p><a href="{{ post.url }}" class="button">Read more</a> {% lucide "move-right", { "width": "12", "height": "12", "stroke-width": "6" } %}</p>
+    <p><a href="{{ post.url }}" class="button">Read more</a> {% lucide "move-right", { "width": "12", "height": "12", "stroke-width": "6" } %}</p></li>
  <hr>
 {% endfor %}
 
@@ -65,3 +71,4 @@ pagination:
 </center>
   </nav>
 {% endif %}
+#}
