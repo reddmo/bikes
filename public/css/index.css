@@ -50,7 +50,8 @@
 	--border-color: light-dark(#d81c23,#f4db7d);
 	--code-background-color: light-dark(#f2f2f2,#030404);
 	--code-color: light-dark(#222,#ddd);
-
+ --heading: light-dark(#007b96,#f7ca18);
+	--heading-shadow: light-dark(#4e2e92,rgba(246,36,89));
 /*
 	--background-color: light-dark(#fefefe,#1a2238);
 	--text-color: light-dark(#212829,#f2f6f7);
@@ -118,10 +119,10 @@ h6 {
 }
 
 h1 {
-	color: light-dark(var(--text-color-link-visited),var(--text-color-link-active));
+	color: var(--heading);
 	font-size: var(--font-size-xl);
 	font-weight: 900;
-	text-shadow: -3px 3px light-dark(var(--text-color-link-active),var(--text-color-link-visited));
+	text-shadow: -3px 3px var(--heading-shadow);
 }
 
 h2 {
@@ -418,6 +419,7 @@ header {
 }
 .postlist-link {
 	font-size: var(--font-size-base); /* 19px /16 */
+	font-weight: 700;
 	flex-basis: calc(100% - 1.5rem);
 	padding-left: .25em;
 	padding-right: .5em;
@@ -427,7 +429,7 @@ header {
 	text-wrap: pretty;
 }
 .postlist-item-active .postlist-link {
-	font-weight: 700;
+	font-weight: bold;
 }
 
 /* Tags */
