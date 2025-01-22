@@ -427,7 +427,7 @@ header {
 	text-wrap: pretty;
 }
 .postlist-item-active .postlist-link {
-	font-weight: bold;
+	font-weight: 700;
 }
 
 /* Tags */
