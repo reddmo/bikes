@@ -122,7 +122,7 @@ h1 {
 	color: var(--heading);
 	font-size: var(--font-size-xl);
 	font-weight: 900;
-	text-shadow: -3px 3px var(--heading-shadow);
+	text-shadow: -2px 2px var(--heading-shadow);
 }
 
 h2 {
