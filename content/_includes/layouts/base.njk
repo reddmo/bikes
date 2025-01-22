@@ -92,11 +92,12 @@
 				{%- for entry in collections.all | eleventyNavigation %}
 					<li class="nav-item"><a href="{{ entry.url }}" {% if entry.url == page.url %} aria-current="page"{% endif %}>{{ entry.title }}</a></li>
 				{%- endfor %}
+				</ul>
 				<p>
 					<button id="autoSwitch" type="button" onclick="switchAuto()">Auto</button>
 					 <button id="lightSwitch" type="button" onclick="switchLight()">Light</button>
-					 <button id="darkSwitch" type="button" onclick="switchDark()">Dark</button></p>
-				</ul>
+					 <button id="darkSwitch" type="button" onclick="switchDark()">Dark</button>
+				</p>
 			</nav></center>
 		</header>
 
