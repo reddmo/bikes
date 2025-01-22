@@ -50,8 +50,8 @@
 	--border-color: light-dark(#d81c23,#f4db7d);
 	--code-background-color: light-dark(#f2f2f2,#030404);
 	--code-color: light-dark(#222,#ddd);
- --heading: light-dark(#007b96,#f7ca18);
-	--heading-shadow: light-dark(#4e2e92,rgba(246,36,89));
+ 	--heading: light-dark(#007b96,#f7ca18);
+	--heading-shadow: light-dark(#e31c3d,rgba(246,36,89));
 /*
 	--background-color: light-dark(#fefefe,#1a2238);
 	--text-color: light-dark(#212829,#f2f6f7);
