@@ -122,7 +122,7 @@ h1 {
 	color: var(--heading);
 	font-size: var(--font-size-xl);
 	font-weight: 900;
-	text-shadow: -2px 2px var(--heading-shadow);
+	text-shadow: -2.5px 2.5px var(--heading-shadow);
 }
 
 h2 {
@@ -176,24 +176,24 @@ li {
 a[href] {
 	color: var(--text-color); 
 	text-decoration-color: var(--text-color-link);
-	text-decoration-thickness: .175em;
+	text-decoration-thickness: .200em;
 	text-decoration-style: solid;
-	text-underline-offset: .16rem;
+	text-underline-offset: .08rem;
 }
 a[href]:visited {
 	color: var(--text-color); 
 	text-decoration-color: var(--text-color-link-visited);
-	text-decoration-thickness: .175em;
+	text-decoration-thickness: .200em;
 	text-decoration-style: solid;
-	text-underline-offset: .16rem;
+	text-underline-offset: .10rem;
 }
 a[href]:hover,
 a[href]:active {
 	color: var(--text-color);
 	text-decoration-color: var(--text-color-link-active);
-	text-decoration-thickness: .175em;
+	text-decoration-thickness: .200em;
 	text-decoration-style: solid;
-	text-underline-offset: .18rem;
+	text-underline-offset: .16rem;
 }
 
 blockquote {
@@ -239,7 +239,7 @@ main :first-child {
 } 
 
 header {
-	border-bottom: 2px dashed var(--text-color-link);
+	border-bottom: 4px dashed var(--text-color-link);
 }
 header:after {
 	content: "";
@@ -259,7 +259,7 @@ header:after {
 	padding: 1em 0;
 }
 .links-nextprev {
-	border-top: 2px dashed var(--text-color-link);
+	border-top: 4px dashed var(--text-color-link);
 }
 .links-nextprev > * {
 	flex-grow: 1;
@@ -371,17 +371,16 @@ header {
 .nav-item a[href]:not(:hover) {
 	color: var(--text-color) !important; 
 	text-decoration-color: var(--text-color-link);
-	text-decoration-thickness: .175em;
+	text-decoration-thickness: .200em;
 	text-decoration-style: solid;
-	text-underline-offset: .16rem;
+	text-underline-offset: .10rem;
 }
 
 .nav-item a[href][aria-current="page"] {
 	color: var(--text-color-link-active) !important; 
-	text-decoration-color: var(--text-color-link-visited);
-	text-decoration-thickness: .175em;
+	text-decoration-thickness: .200em;
 	text-decoration-style: solid;
-	text-underline-offset: .18rem;
+	text-underline-offset: .16rem;
 	font-weight: 900;
 }
 
@@ -424,8 +423,8 @@ header {
 	padding-left: .25em;
 	padding-right: .5em;
 	text-underline-position: from-font;
-	text-underline-offset: 0.18rem;
-	text-decoration-thickness: 1px;
+	text-underline-offset: 0.10rem;
+	text-decoration-thickness: .200em;
 	text-wrap: pretty;
 }
 .postlist-item-active .postlist-link {
@@ -439,9 +438,9 @@ header {
 	justify-content: center;
 	text-transform: uppercase;
 	text-decoration-color: var(--text-color-link);
-	text-decoration-thickness: .175em;
+	text-decoration-thickness: .200em;
 	text-decoration-style: solid;
-	text-underline-offset: .16rem;
+	text-underline-offset: .10rem;
 }
 
 .postlist-item > .post-tag {
@@ -463,7 +462,7 @@ header {
 
 .footer {
 	font-family: var(--font-family);
-	}
+}
 
 .footer-links {
 	list-style: none;
