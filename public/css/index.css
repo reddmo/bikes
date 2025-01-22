@@ -120,6 +120,8 @@ h6 {
 h1 {
 	color: var(--text-color-link-active);
 	font-size: var(--font-size-xl);
+	font-weight: 900;
+	text-shadow: -3px 3px var(--text-color-link-visited);
 }
 
 h2 {
