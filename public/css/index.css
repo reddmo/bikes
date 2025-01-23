@@ -209,7 +209,7 @@ button {
 	border-radius: 4px;
 	padding: 4px;
 	border: 2px solid var(--text-color-link-visited);
-	font-size: var(--font-size-base);
+	font-size: .8125em !important;
 	place-items: center;
 	font-size: inherit;
 	font-family: var(--font-family);
