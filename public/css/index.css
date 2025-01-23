@@ -239,7 +239,7 @@ main :first-child {
 } 
 
 header {
-	border-bottom: 4px dashed var(--text-color-link);
+	border-bottom: .200em solid var(--text-color-link);
 }
 header:after {
 	content: "";
@@ -259,7 +259,7 @@ header:after {
 	padding: 1em 0;
 }
 .links-nextprev {
-	border-top: 4px dashed var(--text-color-link);
+	border-top: .200em solid var(--text-color-link);
 }
 .links-nextprev > * {
 	flex-grow: 1;
