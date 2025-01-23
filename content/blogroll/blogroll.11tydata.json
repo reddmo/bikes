@@ -66,11 +66,6 @@
         "feed": "https://anniemueller.com/posts_feed"
       },
       {
-        "name": "Amerpie by Lou Plummer",
-        "url": "https://amerpie.lol",
-        "feed": "https://amerpie.lol/feed.json"
-      },
-      {
       "name": "srs bsns (lol)",
       "url": "https://srsbsns.lol",
       "feed": "https://srsbsns.lol/feed/"
