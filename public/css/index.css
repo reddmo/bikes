@@ -462,13 +462,14 @@ header {
 
 .footer {
 	font-family: var(--font-family);
+	justify-content: center;
 }
 
 .footer-links {
 	list-style: none;
 	display: flex;
 	color: var(--text-color-link);
-	align-items: left;
+	justify-content: center;
 	gap: 1.5rem;
 	padding-left: 0;
 }
