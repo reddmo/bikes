@@ -10,28 +10,37 @@ export default async () => {
     const url = `${MASTODON_INSTANCE}/api/v1/accounts/${ACCOUNT_ID}/statuses`;
   
     try {
-      // Fetch the posts and cache them for 1 hour
-      const posts = await fetch(url, {
-        duration: '1h',  // Cache duration
-        fetchOptions: {
-          headers: {
-            'Authorization': `Bearer ${MASTO_TOKEN}`,  // Authorization header
+        // Fetch the data from Mastodon API and cache for 1 hour
+        const postsBuffer = await fetch(url, {
+          duration: '1h',  // Cache duration
+          fetchOptions: {
+            headers: {
+              'Authorization': `Bearer ${MASTO_TOKEN}`,
+            },
           },
-        },
-      });
-  
-      // Log the posts to ensure they are fetched correctly
-      console.log(posts);
-  
-      // Optionally, sort posts by `created_at` to display the newest first
-      posts.sort((a, b) => new Date(b.created_at) - new Date(a.created_at));
-  
-      const latestPosts = posts.slice(0, 20);
+        });
+    
+      // Convert the Buffer to a string
+      const postsJsonStr = postsBuffer.toString();  // Convert Buffer to string
 
-    return latestPosts;  // Return the newest 20 posts
-  } catch (error) {
-    // Log and return an empty array if there's an error with the API request
-    console.error('Error fetching Mastodon posts:', error);
-    return [];
-  }
-};
+      // Parse the string into a JSON object
+      const posts = JSON.parse(postsJsonStr);  // Convert the string to JSON
+  
+      // Log the posts to verify
+
+      // Filter out replies and reposts (boosts)
+      
+      const filteredPosts = posts.filter(post => !post.in_reply_to_id && !post.reblog);
+
+      // Sort posts by `created_at` (newest first)
+      filteredPosts.sort((a, b) => new Date(b.created_at) - new Date(a.created_at));
+  
+      // Limit to the newest 20 posts
+      const latestPosts = filteredPosts.slice(0, 200);
+  
+      return latestPosts;  // Return the latest 40 posts
+    } catch (error) {
+      console.error('Error fetching Mastodon posts:', error);
+      return [];
+    }
+  };

@@ -1,12 +1,17 @@
-<ul>
-    {% for post in mastodonPosts %}
-      <li>
-        <!-- Render the post content with HTML, using the `safe` filter to allow raw HTML -->
-        <p>{{ post.content | safe }}</p>
-        <small>Posted on: {{ post.created_at }}</small>
-      </li>
-    {% else %}
-      <!-- If no posts are available, display a message -->
-      <li>No posts available.</li>
-    {% endfor %}
-  </ul>
+{% if mastodonPosts | length > 0 %}
+{% for post in mastodonPosts %}
+
+    <h2>{{ post.data.title }}</h2>
+        <ul class="post-metadata">
+            <li><time datetime="{{ post.created_at | htmlDateString }}" style="color: var(--text-color-link)">Posted on: {{ post.created_at | readableDate("MMMM dd, yyyy, h:mm a") }}</time></li>
+        </ul>
+    
+    {{ post.content | safe }}
+    {% for media in post.media_attachments %}
+              <center><img eleventy:widths="450" src="{{ media.url }}" alt="Mastodon Image" /></center>
+            {% endfor %}
+ <br />
+{% endfor %}
+{% else %}
+  <p>No posts available.</p>
+{% endif %}

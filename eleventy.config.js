@@ -99,7 +99,7 @@ const md = markdownit(opt)
     templateData: {
       eleventyNavigation: {
         key: "Feed",
-        order: 7
+        order: 8
       }
     },
     collection: {
