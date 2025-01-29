@@ -89,7 +89,7 @@ const md = markdownit(opt)
         },
       ],
     },
-  });
+  }); 
 
   // Atom Feed Plugin
   eleventyConfig.addPlugin(feedPlugin, {
