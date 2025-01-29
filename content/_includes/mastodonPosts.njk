@@ -1,0 +1,12 @@
+<ul>
+    {% for post in mastodonPosts %}
+      <li>
+        <!-- Render the post content with HTML, using the `safe` filter to allow raw HTML -->
+        <p>{{ post.content | safe }}</p>
+        <small>Posted on: {{ post.created_at }}</small>
+      </li>
+    {% else %}
+      <!-- If no posts are available, display a message -->
+      <li>No posts available.</li>
+    {% endfor %}
+  </ul>
