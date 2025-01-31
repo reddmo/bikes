@@ -97,16 +97,18 @@ html,
 body {
 	padding: 0;
 	margin: 0 auto;
-	font-family: var(--font-family);
+
 	color: var(--text-color); 
 	background-color: var(--background-color);
 	text-wrap: pretty;
 }
 html {
 	overflow-y: scroll;
+	font-family: var(--font-family);
 }
 body {
 	max-width: 70em;
+	font-family: 'Departure';
 }
 
 h1,

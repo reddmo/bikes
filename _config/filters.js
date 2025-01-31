@@ -1,29 +1,15 @@
 import { DateTime } from "luxon";
 
 export default function(eleventyConfig) {
-	eleventyConfig.addFilter("readableDate", (dateObj, format = "dd LLLL yyyy", zone = "utc") => {
-		if (typeof dateObj === 'string') {
-		  // If the input is a string (likely ISO format), use fromISO()
-		  return DateTime.fromISO(dateObj, { zone }).toFormat(format);
-		} else if (dateObj instanceof Date) {
-		  // If the input is a JS Date object, use fromJSDate()
-		  return DateTime.fromJSDate(dateObj, { zone }).toFormat(format);
-		} else {
-		  // If the input is neither string nor Date, return a default or error
-		  return "Invalid date";
-		}
-	  });
-	
-	  // Optional: Add another filter for HTML5 date formatting
-	  eleventyConfig.addFilter("htmlDateString", (dateObj) => {
-		if (typeof dateObj === 'string') {
-		  return DateTime.fromISO(dateObj).toFormat('yyyy-LL-dd');
-		} else if (dateObj instanceof Date) {
-		  return DateTime.fromJSDate(dateObj).toFormat('yyyy-LL-dd');
-		} else {
-		  return "Invalid date";
-		}
-	  });
+	eleventyConfig.addFilter("readableDate", (dateObj, format, zone) => {
+		// Formatting tokens for Luxon: https://moment.github.io/luxon/#/formatting?id=table-of-tokens
+		return DateTime.fromJSDate(dateObj, { zone: zone || "utc" }).toFormat(format || "dd LLLL yyyy");
+	});
+
+	eleventyConfig.addFilter("htmlDateString", (dateObj) => {
+		// dateObj input: https://html.spec.whatwg.org/multipage/common-microsyntaxes.html#valid-date-string
+		return DateTime.fromJSDate(dateObj, { zone: "utc" }).toFormat('yyyy-LL-dd');
+	});
 
 	// Get the first `n` elements of a collection.
 	eleventyConfig.addFilter("head", (array, n) => {
@@ -48,7 +34,7 @@ export default function(eleventyConfig) {
 	});
 
 	eleventyConfig.addFilter("filterTagList", function filterTagList(tags) {
-		return (tags || []).filter(tag => ["all", "posts", "notes", "mastodon"].indexOf(tag) === -1);
+		return (tags || []).filter(tag => ["all", "posts", "notes"].indexOf(tag) === -1);
 	});
 
 };
