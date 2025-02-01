@@ -186,9 +186,9 @@ export const config = {
 
   dir: {
     input: "content",            // Where content lives
-    includes: "/_includes",     // Where includes (such as WebC components) are
+    includes: "/_includes",      // Where includes (such as WebC components) are
     svg: "/svg",
     data: "/_data",             // Global data
-    output: "_site"             // Output directory
+    output: "dist"             // Output directory
   },
 };
