@@ -189,6 +189,6 @@ export const config = {
     includes: "/_includes",      // Where includes (such as WebC components) are
     svg: "/svg",
     data: "/_data",             // Global data
-    output: "dist"             // Output directory
+    output: "_site"             // Output directory
   },
 };
