@@ -26,10 +26,10 @@ export default async function(eleventyConfig) {
       "./public/": "/",
       "./node_modules/prismjs/themes/prism-okaidia.css": "/css/prism-okaidia.css"
     })
-    .addPassthroughCopy("./content/feed/pretty-atom-feed.xsl");
+    .addPassthroughCopy("./site/feed/pretty-atom-feed.xsl");
 
   // Fonts
-  eleventyConfig.addPassthroughCopy("content/assets/fonts/*.{woff,woff2,ttf}");
+  eleventyConfig.addPassthroughCopy("site/assets/fonts/*.{woff,woff2,ttf}");
   
   eleventyConfig.addPassthroughCopy("admin");
 
@@ -54,7 +54,7 @@ const md = markdownit(opt)
   );
 
   // Watch content images for the image pipeline
-  eleventyConfig.addWatchTarget("content/**/*.{svg,webp,png,jpeg}");
+  eleventyConfig.addWatchTarget("site/**/*.{svg,webp,png,jpeg}");
 
   // Per-page bundles (e.g. {% css %} and {% js %} shortcodes)
   eleventyConfig.addBundle("css");
@@ -83,7 +83,7 @@ const md = markdownit(opt)
       fonts: [
         {
           name: 'B612',
-          data: fs.readFileSync('content/assets/fonts/B612-Bold.ttf'),
+          data: fs.readFileSync('site/assets/fonts/B612-Bold.ttf'),
           weight: 700,
           style: 'normal',
         },
@@ -162,11 +162,11 @@ const md = markdownit(opt)
   eleventyConfig.addShortcode("lucide", function(eleventyLucideicons) { /* … */ });
 
   eleventyConfig.addCollection("posts", function (collections) {
-		return collections.getFilteredByGlob("content/blog/**/*.md");
+		return collections.getFilteredByGlob("site/blog/**/*.md");
 	});
 
   eleventyConfig.addCollection("notes", function (collections) {
-		return collections.getFilteredByGlob("content/notes/**/*.md");
+		return collections.getFilteredByGlob("site/notes/**/*.md");
 	});
 }
 
@@ -185,7 +185,7 @@ export const config = {
   webcTemplateEngine: "webc",    // For .webc files
 
   dir: {
-    input: "content",            // Where content lives
+    input: "site",            // Where content lives
     includes: "/_includes",      // Where includes (such as WebC components) are
     svg: "/svg",
     data: "/_data",             // Global data
