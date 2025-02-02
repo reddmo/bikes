@@ -27,7 +27,7 @@ export default async function(eleventyConfig) {
       "./node_modules/prismjs/themes/prism-okaidia.css": "/css/prism-okaidia.css"
     })
     .addPassthroughCopy("./site/feed/pretty-atom-feed.xsl");
-
+  
   // Fonts
   eleventyConfig.addPassthroughCopy("site/assets/fonts/*.{woff,woff2,ttf}");
   
