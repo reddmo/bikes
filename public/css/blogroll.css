@@ -1,6 +1,9 @@
 /* Blogroll */
 .blogroll a {
-  text-decoration: none;
+	text-decoration-color: var(--text-color-link);
+	text-decoration-thickness: .200em;
+	text-decoration-style: solid;
+	text-underline-offset: .08rem;
 }
 
 .blogpost a {
@@ -11,10 +14,10 @@
 }
 
 .blogroll:hover {
-  outline: 1px solid var(--text-color-link-active);
-  background-color: var(--text-color-link-active);
-  color: var(--background-color) !important;
-  text-decoration: none;
+	text-decoration-color: var(--text-color-link-active);
+	text-decoration-thickness: .200em;
+	text-decoration-style: solid;
+	text-underline-offset: .16rem;
 }
 
 .blogpost:hover {

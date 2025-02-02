@@ -3,14 +3,16 @@ eleventyNavigation:
   key: Blogroll
   order: 6
 ---
+{%- css %}{% include "public/css/blogroll.css" %}{% endcss %}
 <h1>Blogroll</h1>
 <div>
 {% for blog in blogData %}
 <br>
-    <img alt="none" src="{{ blog.favicon }}">
+    
 
         <h2>
-            <a href="{{ blog.url | url }}" target="_blank" class="blogroll" style="text-decoration: none;">
+            <img alt="none" src="{{ blog.favicon }}">
+            <a href="{{ blog.url | url }}" target="_blank" class="blogroll">
                 {{ blog.name }}
             </a>
         </h2>
