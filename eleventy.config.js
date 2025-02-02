@@ -78,13 +78,13 @@ const md = markdownit(opt)
 
 	eleventyConfig.addPlugin(EleventyRenderPlugin);
   eleventyConfig.addPlugin(EleventyPluginOgImage, {
-    shortcodeOutput: async (ogImage) => `<meta property="og:image" content="https://stuffandthings.lol${await ogImage.outputUrl()}" />`,
+    shortcodeOutput: async (ogImage) => `<meta property="og:image" content="{{ metadata.url }}${await ogImage.outputUrl()}" />`,
     satoriOptions: {
       fonts: [
         {
-          name: 'B612',
-          data: fs.readFileSync('site/assets/fonts/B612-Bold.ttf'),
-          weight: 700,
+          name: 'Departure',
+          data: fs.readFileSync('site/assets/fonts/DepartureMono-Regular.woff'),
+          weight: 400,
           style: 'normal',
         },
       ],
