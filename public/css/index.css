@@ -178,14 +178,14 @@ li {
 a[href] {
 	color: var(--text-color); 
 	text-decoration-color: var(--text-color-link);
-	text-decoration-thickness: .200em;
+	text-decoration-thickness: .130em;
 	text-decoration-style: solid;
 	text-underline-offset: .08rem;
 }
 a[href]:visited {
 	color: var(--text-color); 
 	text-decoration-color: var(--text-color-link-visited);
-	text-decoration-thickness: .200em;
+	text-decoration-thickness: .130em;
 	text-decoration-style: solid;
 	text-underline-offset: .10rem;
 }
@@ -193,7 +193,7 @@ a[href]:hover,
 a[href]:active {
 	color: var(--text-color);
 	text-decoration-color: var(--text-color-link-active);
-	text-decoration-thickness: .200em;
+	text-decoration-thickness: .130em;
 	text-decoration-style: solid;
 	text-underline-offset: .16rem;
 }
@@ -372,14 +372,14 @@ header {
 .nav-item a[href]:not(:hover) {
 	color: var(--text-color) !important; 
 	text-decoration-color: var(--text-color-link);
-	text-decoration-thickness: .200em;
+	text-decoration-thickness: .130em;
 	text-decoration-style: solid;
 	text-underline-offset: .10rem;
 }
 
 .nav-item a[href][aria-current="page"] {
 	color: var(--text-color-link-active) !important; 
-	text-decoration-thickness: .200em;
+	text-decoration-thickness: .130em;
 	text-decoration-style: solid;
 	text-underline-offset: .16rem;
 	font-weight: 900;
@@ -439,7 +439,7 @@ header {
 	justify-content: center;
 	text-transform: uppercase;
 	text-decoration-color: var(--text-color-link);
-	text-decoration-thickness: .200em;
+	text-decoration-thickness: .130em;
 	text-decoration-style: solid;
 	text-underline-offset: .10rem;
 }

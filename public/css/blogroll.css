@@ -1,21 +1,21 @@
 /* Blogroll */
 .blogroll a {
 	text-decoration-color: var(--text-color-link);
-	text-decoration-thickness: .200em;
+	text-decoration-thickness: .130em;
 	text-decoration-style: solid;
 	text-underline-offset: .08rem;
 }
 
 .blogpost a {
   text-decoration-color: var(--text-color-link);
-  text-decoration-thickness: .150em;
+  text-decoration-thickness: .130em;
   text-underline-offset: 2px;
   color: var(--text-color);
 }
 
 .blogroll:hover {
 	text-decoration-color: var(--text-color-link-active);
-	text-decoration-thickness: .200em;
+	text-decoration-thickness: .130em;
 	text-decoration-style: solid;
 	text-underline-offset: .16rem;
 }
