@@ -64,11 +64,6 @@
         "name": "annie's blog",
         "url": "https://anniemueller.com",
         "feed": "https://anniemueller.com/posts_feed"
-      },
-      {
-      "name": "srs bsns (lol)",
-      "url": "https://srsbsns.lol",
-      "feed": "https://srsbsns.lol/feed/"
       }
     ]
 }
