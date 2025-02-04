@@ -209,11 +209,11 @@ blockquote {
 
 button {
 	display: inline-block;
-	background-color: var(--text-color-link-active); !important;
+	background-color: var(--text-color-link-active) !important;
 	color: var(--background-color);
 	border-radius: 4px;
 	padding: 4px;
-	border: 3px solid var(--text-color-link);
+	border: 3px solid var(--text-color-link-active);
 	place-items: center;
 	font-size: inherit;
 	font-family: var(--font-family);
@@ -228,9 +228,9 @@ button a {
 
 button:hover,
 button:focus {
-	background-color: var(--text-color-link); !important;
+	background-color: var(--text-color-link) !important;
 	color: var(--background-color);
-	border: 3px solid var(--text-color-link-active);
+	border: 3px solid var(--text-color-link);
 }
 
 main,
