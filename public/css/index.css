@@ -46,6 +46,7 @@
 	--text-color: light-dark(#3a3a3a,#e0e0e0);
 	--text-color-link: light-dark(#E07A5F,#E07A5F);
 	--text-color-link-active: light-dark(#6b8e7f,#6B8E7F);
+	--text-color-active: light-dark(#4A90E2,#4A90E2);
 	--text-color-link-visited: light-dark(#c94a53,#c94a53);
 	--border-color: light-dark(#d81c23,#f4db7d);
 	--code-background-color: light-dark(#f2f2f2,#45475a);
@@ -53,6 +54,7 @@
  	--heading: light-dark(#c94a53,#d4a373);
 	--heading-shadow: light-dark(#E07A5F,#c94a53);
 	--header-bottom: light-dark(#d9d9d9,#444444);
+	--button-text: light-dark(#f9f7f2,#f9f7f2);
 /*
 	--background-color: light-dark(#fefefe,#1a2238);
 	--text-color: light-dark(#212829,#f2f6f7);
@@ -207,8 +209,8 @@ blockquote {
 
 button {
 	display: inline-block;
-	background-color: var(--text-color-link) !important;
-	color: var(--background-color);
+	background-color: var(--text-color-active) !important;
+	color: var(--button-text);
 	border-radius: 4px;
 	padding: 4px;
 	border: 3px solid var(--text-color-link-visited);
@@ -226,9 +228,9 @@ button a {
 
 button:hover,
 button:focus {
-	background-color: var(--text-color-link-active) !important;
-	color: var(--background-color);
-	border: 3px solid var(--text-color-link);
+	background-color: var(--text-color-link-visited) !important;
+	color: var(--button-text);
+	border: 3px solid var(--text-color-link-active);
 }
 
 main,
@@ -381,7 +383,7 @@ header {
 }
 
 .nav-item a[href][aria-current="page"] {
-	color: var(--text-color-link-active) !important; 
+	color: var(--text-color-active) !important; 
 	text-decoration-thickness: .130em;
 	text-decoration-style: solid;
 	text-underline-offset: .16rem;
