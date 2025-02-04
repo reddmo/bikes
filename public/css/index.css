@@ -111,7 +111,7 @@ html {
 }
 body {
 	max-width: 70em;
-	font-family: 'Departure';
+	font-family: var(--font-family);
 }
 
 h1,
