@@ -43,10 +43,10 @@
 	--color-important: light-dark(#8250df,#a371f7);
 
 	--background-color: light-dark(#F9F7F2,#1e1e1e);
-	--text-color: light-dark(#3a3a3a,#e0e0e0);
+	--text-color: light-dark(#3a3a3a,#f9f7f2);
 	--text-color-link: light-dark(#E07A5F,#E07A5F);
 	--text-color-link-active: light-dark(#6b8e7f,#6B8E7F);
-	--text-color-active: light-dark(#4A90E2,#4A90E2);
+	--text-color-active: light-dark(#c94a53,#d4a373);
 	--text-color-link-visited: light-dark(#c94a53,#c94a53);
 	--border-color: light-dark(#d81c23,#f4db7d);
 	--code-background-color: light-dark(#f2f2f2,#45475a);
@@ -209,8 +209,8 @@ blockquote {
 
 button {
 	display: inline-block;
-	background-color: var(--text-color-active) !important;
-	color: var(--button-text);
+	background-color: var(--background-color) !important;
+	color: var(--text-color);
 	border-radius: 4px;
 	padding: 4px;
 	border: 3px solid var(--text-color-link-visited);
@@ -228,8 +228,8 @@ button a {
 
 button:hover,
 button:focus {
-	background-color: var(--text-color-link-visited) !important;
-	color: var(--button-text);
+	background-color: var(--text-color) !important;
+	color: var(--background-color);
 	border: 3px solid var(--text-color-link-active);
 }
 
