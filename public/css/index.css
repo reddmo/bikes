@@ -422,7 +422,7 @@ header {
 }
 .postlist-date,
 .postlist-item:before {
-	font-size: 0.8125em; /* 13px /16 */
+	font-size: var(--font-size-xs); /* 13px /16 */
 	color: var(--color-gray-90);
 }
 .postlist-description {
