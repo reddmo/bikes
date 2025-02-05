@@ -49,7 +49,7 @@
 	--text-color-active: light-dark(#c94a53,#d4a373);
 	--text-color-link-visited: light-dark(#007b96,rgba(246,36,89));
     --border-color: light-dark(#d81c23,#f4db7d);
-    --code-background-color: light-dark(#f2f2f2,#030404);
+    --code-background-color: light-dark(#d9d9d9,#444444);
     --code-color: light-dark(#222,#ddd);
     --heading: light-dark(#e31c3d,#f7ca18);
     --heading-shadow: light-dark(#4e2e92,rgba(246,36,89));
@@ -63,12 +63,22 @@
 	--text-color-link-visited: light-dark(#247e81,#9daaf2);
 	--border-color: light-dark(#d81c23,#f4db7d); */
 	--syntax-tab-size: 2;
-
+/*
 	--font-size-xs: clamp(1rem, calc(0.96rem + 0.22vw), 1.13rem);
 	--font-size-base: clamp(1.25rem, calc(1.16rem + 0.43vw), 1.5rem);
 	--font-size-lg: clamp(1.56rem, calc(1.41rem + 0.76vw), 2rem);
 	--font-size-xl: clamp(1.95rem, calc(1.71rem + 1.24vw), 2.66rem);
 	--font-size-xxl: clamp(2.44rem, calc(2.05rem + 1.93vw), 3.55rem);
+*/
+
+	--font-size-xs: clamp(0.8681rem, 0.8639rem + 0.0208vw, 0.88rem);
+    --font-size-s: clamp(1.0417rem, 1.0214rem + 0.1014vw, 1.1rem);
+    --font-size-base: clamp(1.25rem, 1.2065rem + 0.2174vw, 1.375rem);
+    --font-size-md: clamp(1.5rem, 1.4239rem + 0.3804vw, 1.7188rem);
+    --font-size-lg: clamp(1.8rem, 1.6788rem + 0.606vw, 2.1484rem);
+    --font-size-xl: clamp(2.16rem, 1.9772rem + 0.914vw, 2.6855rem);
+    --font-size-xxl: clamp(2.592rem, 2.3259rem + 1.3303vw, 3.3569rem);
+    --font-size-max: clamp(3.1104rem, 2.7327rem + 1.8883vw, 4.1962rem);
 
 	--space-1: 0.35rem;
 	--space-2: 0.5rem;
@@ -125,7 +135,7 @@ h6 {
 
 h1 {
 	color: var(--heading);
-	font-size: var(--font-size-xl);
+	font-size: var(--font-size-xxl);
 	font-weight: 900;
 	text-shadow: -2.5px 2.5px var(--heading-shadow);
 }
@@ -181,14 +191,14 @@ li {
 a[href] {
 	color: var(--text-color); 
 	text-decoration-color: var(--text-color-link);
-	text-decoration-thickness: .130em;
+	text-decoration-thickness: .150em;
 	text-decoration-style: solid;
 	text-underline-offset: .08rem;
 }
 a[href]:visited {
 	color: var(--text-color); 
 	text-decoration-color: var(--text-color-link-visited);
-	text-decoration-thickness: .130em;
+	text-decoration-thickness: .150em;
 	text-decoration-style: solid;
 	text-underline-offset: .10rem;
 }
@@ -196,7 +206,7 @@ a[href]:hover,
 a[href]:active {
 	color: var(--text-color);
 	text-decoration-color: var(--text-color-link-active);
-	text-decoration-thickness: .130em;
+	text-decoration-thickness: .150em;
 	text-decoration-style: solid;
 	text-underline-offset: .16rem;
 }
@@ -377,14 +387,14 @@ header {
 .nav-item a[href]:not(:hover) {
 	color: var(--text-color) !important; 
 	text-decoration-color: var(--text-color-link);
-	text-decoration-thickness: .130em;
+	text-decoration-thickness: .150em;
 	text-decoration-style: solid;
 	text-underline-offset: .10rem;
 }
 
 .nav-item a[href][aria-current="page"] {
 	color: var(--text-color-active) !important; 
-	text-decoration-thickness: .130em;
+	text-decoration-thickness: .150em;
 	text-decoration-style: solid;
 	text-underline-offset: .16rem;
 	font-weight: 900;
@@ -423,7 +433,7 @@ header {
 	padding-left: .25em;
 }
 .postlist-link {
-	font-size: var(--font-size-base); /* 19px /16 */
+	font-size: var(--font-size-md); /* 19px /16 */
 	font-weight: 700;
 	flex-basis: calc(100% - 1.5rem);
 	padding-left: .25em;
@@ -444,7 +454,7 @@ header {
 	justify-content: center;
 	text-transform: uppercase;
 	text-decoration-color: var(--text-color-link);
-	text-decoration-thickness: .130em;
+	text-decoration-thickness: .150em;
 	text-decoration-style: solid;
 	text-underline-offset: .10rem;
 }

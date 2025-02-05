@@ -78,7 +78,7 @@
 		<a href="#skip" class="visually-hidden">Skip to main content</a>
 
 		<header>
-			<center><a href="/" class="home-link" aria-label="Home"><svg height="79" width="371" xmlns="http://www.w3.org/2000/svg">
+			<a href="/" class="home-link" aria-label="Home"><svg height="79" width="371" xmlns="http://www.w3.org/2000/svg">
     <text x="0" y="48" alignment-baseline="middle" font-family="var(--font-family)" fill="var(--text-color-link)" font-size="1.25em" stroke="none" stroke-width="2px">stuff<tspan alignment-baseline="middle" stroke="none" fill="var(--text-color-link-active)">&</tspan><tspan alignment-baseline="middle" fill="var(--text-color-link-visited)" stroke="none" stroke-width="2px">things</tspan></text>
 	<text x="3" y="44" alignment-baseline="middle" font-family="var(--font-family)" fill="var(--text-color-link-visited)" font-size="1.25em" stroke="var(--color-gray-50)" stroke-width="2" paint-order="stroke fill">stuff<tspan alignment-baseline="middle" stroke="var(--color-gray-50)" stroke-width="2" fill="var(--text-color-link)" paint-order="stroke fill">&</tspan><tspan alignment-baseline="middle" fill="var(--text-color-link-active)" stroke="var(--color-gray-50)" stroke-width="2" paint-order="stroke fill">things</tspan></text>
 	</svg></a>
@@ -89,13 +89,11 @@
 				{%- for entry in collections.all | eleventyNavigation %}
 					<li class="nav-item"><a href="{{ entry.url }}" {% if entry.url == page.url %} aria-current="page"{% endif %}>{{ entry.title }}</a></li>
 				{%- endfor %}
+				<li class="nav-item"><button id="autoSwitch" type="button" onclick="switchAuto()">Auto</button>
+				<button id="lightSwitch" type="button" onclick="switchLight()">Light</button>
+				<button id="darkSwitch" type="button" onclick="switchDark()">Dark</button></li>
 				</ul>
-				<p>
-					<button id="autoSwitch" type="button" onclick="switchAuto()">Auto</button>
-					 <button id="lightSwitch" type="button" onclick="switchLight()">Light</button>
-					 <button id="darkSwitch" type="button" onclick="switchDark()">Dark</button>
-				</p>
-			</nav></center>
+			</nav>
 		</header>
 
 		<main id="skip">
